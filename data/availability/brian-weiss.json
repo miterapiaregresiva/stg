@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
-  "last_checked": "2026-09-18T09:52:10Z",
+  "last_checked": "2026-09-19T09:38:29Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
