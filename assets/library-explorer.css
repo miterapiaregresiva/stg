@@ -1,0 +1,162 @@
+/* Explorador de biblioteca · visión playground en staging
+   Depende de: styles.css (variables), library-catalog.css (ficha de libro, BICA)
+   Nueva experiencia: estantes horizontales por autor/temas/listado, densidades,
+   búsqueda, ficha de libro «abierta» y zoom de portada. */
+
+.library-explorer{display:grid;gap:1.35rem;min-width:0}
+.library-explorer>*{min-width:0}
+
+/* ---- Barra de controles ---- */
+.library-explorer-bar{display:flex;flex-wrap:wrap;gap:.85rem;align-items:flex-end;justify-content:space-between;min-width:0;padding:1rem;border:1px solid rgba(55,35,61,.12);border-radius:var(--radius);background:var(--surface)}
+.library-explorer-views{display:flex;flex:1 1 260px;flex-wrap:wrap;gap:.4rem;min-width:0;max-width:100%}
+.library-explorer-views button{min-height:42px;padding:.5rem .9rem;border:1px solid rgba(107,63,120,.25);border-radius:999px;background:#fff;color:var(--accent-strong);font:inherit;font-size:.9rem;font-weight:700;cursor:pointer}
+.library-explorer-views button:hover{border-color:rgba(107,63,120,.45)}
+.library-explorer-views button.is-active{background:var(--accent);border-color:var(--accent);color:#fff}
+.library-explorer-search{flex:1 1 240px;min-width:0}
+.library-explorer-search label{display:block;margin-bottom:.3rem;color:var(--muted);font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.library-explorer-search input{width:100%;min-height:46px;padding:.6rem .95rem;border:1px solid rgba(55,35,61,.16);border-radius:12px;background:#fff;color:var(--text);font:inherit;font-size:.95rem}
+.library-explorer-search input:focus{outline:2px solid rgba(107,63,120,.22);outline-offset:2px;border-color:rgba(107,63,120,.42)}
+.library-explorer-density{display:flex;flex:0 1 auto;flex-wrap:wrap;align-items:center;gap:.45rem;min-width:0;max-width:100%}
+.library-explorer-density-label{color:var(--muted);font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.library-explorer-density button{min-height:40px;padding:.4rem .8rem;border:1px solid rgba(55,35,61,.16);border-radius:999px;background:#fff;color:var(--text);font:inherit;font-size:.84rem;font-weight:650;cursor:pointer}
+.library-explorer-density button:hover{border-color:rgba(107,63,120,.42)}
+.library-explorer-density button.is-active{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-strong)}
+.library-explorer-status{min-height:1.5em;color:var(--muted);font-size:.88rem}
+
+/* ---- Estante ---- */
+.library-explorer-shelves.is-authors-view{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:1.5rem}
+.library-explorer-shelves.is-authors-view .library-shelf.is-wide-author{grid-column:1/-1}
+.library-shelf{padding:1.15rem 0;border-top:1px solid rgba(55,35,61,.1)}
+.library-shelf:first-child{border-top:0}
+.library-shelf-head{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center;justify-content:space-between}
+.library-shelf-author{display:flex;gap:.8rem;align-items:center;min-width:0}
+.library-shelf-portrait{flex:0 0 auto;width:52px;height:52px;border-radius:50%;overflow:hidden;background:var(--surface-soft);display:grid;place-items:center}
+.library-shelf-portrait img{width:100%;height:100%;object-fit:cover}
+.library-shelf-portrait-img-placeholder{padding:.55rem;opacity:.75}
+.library-shelf-name{display:grid;gap:.05rem;min-width:0}
+.library-shelf-name .eyebrow{margin:0;font-size:.72rem}
+.library-shelf-name h3{margin:0;font-size:1.28rem;line-height:1.25}
+.library-shelf-name h3 a{text-decoration:none;color:var(--text)}
+.library-shelf-name h3 a:hover{color:var(--accent-strong);text-decoration:underline;text-underline-offset:.15em}
+.library-shelf-link{font-size:.86rem;font-weight:700;white-space:nowrap}
+.library-shelf-desc{margin:.6rem 0 0;max-width:var(--measure);color:var(--muted);font-size:.92rem;line-height:1.55}
+
+.library-shelf-rail{position:relative;margin:1rem -1px 0}
+.library-shelf-row{display:grid;grid-auto-flow:column;grid-auto-columns:auto;gap:1rem;overflow-x:auto;padding:.35rem .35rem 1rem;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:rgba(107,63,120,.65) var(--surface-soft);overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y;cursor:grab}
+.library-shelf-row::-webkit-scrollbar{height:8px}
+.library-shelf-row::-webkit-scrollbar-track{background:var(--surface-soft);border-radius:999px}
+.library-shelf-row::-webkit-scrollbar-thumb{background:rgba(107,63,120,.65);border-radius:999px}
+.library-shelf-row.is-dragging{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.library-shelf-row>*{scroll-snap-align:start}
+.library-shelf-arrow{position:absolute;top:38%;z-index:3;width:38px;height:38px;display:none;align-items:center;justify-content:center;border:1px solid rgba(55,35,61,.18);border-radius:50%;background:rgba(255,255,255,.95);box-shadow:var(--shadow);color:var(--accent-strong);font-size:1.15rem;line-height:1;cursor:pointer;transform:translateY(-50%)}
+.library-shelf-arrow.is-prev{left:0}
+.library-shelf-arrow.is-next{right:0}
+.library-shelf-rail.has-overscroll .library-shelf-arrow{display:inline-flex}
+.library-shelf-arrow[disabled]{opacity:0;pointer-events:none}
+@media(hover:none),(pointer:coarse){.library-shelf-arrow{display:none!important}}
+.library-shelf-meta{margin:.35rem 0 0;color:var(--muted);font-size:.84rem}
+
+/* ---- Ficha de obra (card) ---- */
+.book-card{position:relative;width:152px;display:grid;grid-template-rows:auto 1fr;gap:.45rem;padding:.55rem;border:1px solid rgba(55,35,61,.1);border-radius:16px;background:var(--surface);cursor:pointer;transition:border-color .18s ease,box-shadow .18s ease}
+.book-card:hover{border-color:rgba(107,63,120,.38);box-shadow:0 10px 22px rgba(55,34,63,.09)}
+.book-card:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.book-cover-wrap{position:relative}
+.book-cover-wrap .image-credit{z-index:12;pointer-events:auto}
+.book-cover-wrap .image-credit>summary{color:#fff;opacity:1}
+.book-cover-wrap .image-credit-panel{right:0;width:min(14rem,calc(100vw - 2rem));max-width:14rem;max-height:12rem;padding:.55rem .65rem;font-size:.78rem;line-height:1.35;border-radius:10px}
+.library-shelf-row>.book-card:first-child .book-cover-wrap .image-credit-panel{left:0;right:auto}
+.book-cover-wrap .image-credit-panel p{margin:.3rem 0;color:#fff}
+.book-cover-wrap .image-credit-panel a{color:#fff}
+.book-cover{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:10px;background:var(--surface-soft);box-shadow:0 6px 14px rgba(55,34,63,.12)}
+.book-cover.is-placeholder{display:grid;place-items:center;background:linear-gradient(160deg,#f4eef6 0%,#e6d8ea 100%);color:var(--muted);text-align:center;padding:.6rem}
+.book-cover-mono{display:block;font-size:1.5rem;font-weight:800;letter-spacing:.02em;color:rgba(77,41,88,.55)}
+.book-cover-placeholder-note{position:absolute;left:.4rem;right:.4rem;bottom:.4rem;font-size:.62rem;line-height:1.25;color:var(--muted)}
+.book-cover-badges{position:absolute;top:.42rem;left:.42rem;right:.42rem;display:flex;flex-wrap:wrap;gap:.3rem;z-index:2;pointer-events:none}
+.book-cover-badge{display:inline-flex;align-items:center;gap:.28rem;min-height:24px;padding:.16rem .46rem;border-radius:999px;font-size:.64rem;font-weight:800;letter-spacing:0;text-transform:none;box-shadow:0 1px 4px rgba(30,20,34,.14)}
+.book-cover-badge img{width:14px;height:14px}
+.book-cover-badge.badge-physical{background:rgba(77,41,88,.92);color:#fff}
+.book-cover-badge.badge-physical img{filter:brightness(0) invert(1)}
+.book-cover-badge.badge-online{background:rgba(255,255,255,.94);color:#4d2958;border:1px solid rgba(77,41,88,.25)}
+.book-card-copy{display:grid;align-content:start;gap:.18rem;min-width:0}
+.book-card-copy h4{margin:0;font-size:.93rem;line-height:1.3;color:var(--text)}
+.book-card-original{margin:0;color:var(--muted);font-size:.74rem;font-style:italic;line-height:1.35}
+.book-card-author{margin:0;color:var(--accent-strong);font-size:.76rem;font-weight:700}
+.book-card-meta{display:flex;flex-wrap:wrap;gap:.3rem .45rem;align-items:center;margin-top:.2rem}
+.book-card-meta .availability-pill{font-size:.74rem}
+.book-card-ia-label{color:var(--muted);font-size:.72rem;font-weight:650}
+.book-card-topics{display:flex;flex-wrap:wrap;gap:.3rem}
+.book-card-topic{display:inline-block;padding:.12rem .5rem;border-radius:999px;background:var(--accent-soft);color:var(--accent-strong);font-size:.66rem;font-weight:700}
+.book-card-open-hint{position:absolute;inset:0;z-index:1;border:0;border-radius:16px;background:transparent;cursor:pointer}
+.book-card-open-hint:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.book-card.is-placeholder{width:220px;background:var(--surface-soft);border-style:dashed;cursor:default}
+.book-card.is-placeholder .book-card-copy{grid-template-rows:auto}
+.book-card.is-pending{cursor:default;border-style:dashed;background:var(--surface-soft)}
+.book-card.is-pending:hover{border-color:rgba(55,35,61,.18);box-shadow:none}
+.book-card-author-link{font-size:.72rem;font-weight:700}
+
+/* Densidades */
+.library-explorer.density-compact .book-card{width:120px}
+.library-explorer.density-compact .book-cover{aspect-ratio:2/3}
+.library-explorer.density-compact .book-card-copy h4{font-size:.86rem}
+.library-explorer.density-compact .book-card-topics,.library-explorer.density-compact .book-card-meta{display:none}
+.library-explorer.density-wide .book-card{width:184px}
+.library-explorer.density-wide .book-card-copy h4{font-size:1.02rem}
+@media(max-width:700px){
+  .library-explorer-bar{align-items:stretch}
+  .library-explorer-views,.library-explorer-search,.library-explorer-density{flex-basis:100%}
+  .library-explorer-views button,.library-explorer-density button{white-space:normal}
+  .book-card{width:132px}.library-explorer.density-compact .book-card{width:108px}.library-explorer.density-wide .book-card{width:152px}
+}
+@media(max-width:900px){
+  .library-explorer-shelves.is-authors-view{grid-template-columns:minmax(0,1fr)}
+  .library-explorer-shelves.is-authors-view .library-shelf.is-wide-author{grid-column:auto}
+}
+@media(hover:none),(pointer:coarse){
+  .library-shelf-row{scrollbar-width:none;cursor:auto}
+  .library-shelf-row::-webkit-scrollbar{display:none}
+}
+@media(max-width:700px){
+  .book-cover-wrap .image-credit[open]{position:fixed;inset:0;width:auto;height:auto;overflow:visible;z-index:999;pointer-events:none}
+  .book-cover-wrap .image-credit[open]>summary{position:fixed;pointer-events:auto}
+  .book-cover-wrap .image-credit[open] .image-credit-panel{display:block;position:fixed;left:1rem;right:1rem;bottom:1rem;width:auto;max-width:none;max-height:50vh;overflow:auto;pointer-events:auto;z-index:1001}
+}
+
+/* ---- Listado A–Z ---- */
+.library-list-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem}
+.library-list-grid .book-card{width:auto}
+.library-list-empty{padding:2rem;border:1px dashed rgba(55,35,61,.25);border-radius:var(--radius);color:var(--muted);text-align:center}
+
+/* ---- Ficha de libro abierta ---- */
+.library-book-view{margin-top:.5rem}
+.book-open-bar{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;justify-content:space-between;margin-bottom:1.1rem}
+.book-open-back{display:inline-flex;align-items:center;gap:.4rem;min-height:42px;padding:.5rem .95rem;border:1px solid rgba(107,63,120,.3);border-radius:999px;background:#fff;color:var(--accent-strong);font:inherit;font-size:.9rem;font-weight:700;cursor:pointer}
+.book-open-back:hover{border-color:var(--accent);background:var(--accent-soft)}
+.book-open-path{color:var(--muted);font-size:.84rem}
+.book-open{display:grid;gap:2.2rem}
+.book-open-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,280px);gap:2rem;align-items:start}
+.book-open-cover-col{display:grid;gap:.8rem;justify-items:center}
+.book-open-cover-col .book-cover-feature{justify-self:center}
+.book-open-cover-zoom{background:transparent;border:0;padding:0;border-radius:10px;cursor:zoom-in}
+.book-open-full-link{font-size:.85rem;font-weight:700;text-align:center}
+.book-open-copy{min-width:0}
+.book-open-copy h1{font-size:2rem;line-height:1.15;margin:.2rem 0 .4rem}
+.book-open-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0 .9rem}
+.book-open-topic{display:inline-block;padding:.22rem .62rem;border-radius:999px;background:var(--accent-soft);color:var(--accent-strong);font-size:.74rem;font-weight:750}
+.book-open-section{display:grid;gap:0}
+.book-open-section h2{font-size:1.45rem;margin:0 0 .6rem;line-height:1.3}
+.book-open-section>p{max-width:var(--measure)}
+.book-open-others-label{color:var(--muted);font-size:.84rem;font-weight:650}
+@media(max-width:760px){.book-open-hero{grid-template-columns:1fr}.book-open-cover-col{grid-row:1;justify-items:center}.book-open-cover-col .book-cover-feature{max-width:210px}.book-open-copy{grid-row:2}}
+
+/* ---- Zoom de portada ---- */
+.library-zoom-overlay{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:2rem;background:rgba(30,20,34,.82);backdrop-filter:blur(4px)}
+.library-zoom-frame{position:relative;max-width:min(92vw,560px);display:grid;gap:.8rem;justify-items:center}
+.library-zoom-frame img{max-height:78vh;width:auto;max-width:92vw;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.library-zoom-credit{color:#e9e2ec;font-size:.82rem;text-align:center}
+.library-zoom-close{position:absolute;top:1rem;right:1rem;z-index:81;width:42px;height:42px;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:rgba(0,0,0,.35);color:#fff;font-size:1.15rem;line-height:1;cursor:pointer}
+
+/* ---- Preferencias de movimiento ---- */
+@media(prefers-reduced-motion:reduce){
+  .book-card,.library-explorer-views button,.library-explorer-density button{transition:none}
+  .library-shelf-row{scroll-behavior:auto}
+}

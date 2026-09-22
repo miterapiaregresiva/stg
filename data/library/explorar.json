@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-21",
+  "kind": "exploracion-biblioteca",
+  "notice": "Índice de exploración de la biblioteca. Los datos editoriales y de portada de cada obra se resuelven desde data/library y data/book-pages; las obras restantes se marcan como placeholders explícitos hasta disponer de ficha completa.",
+  "topics": [
+    {"slug": "vida-entre-vidas", "name": "Vida entre vidas"},
+    {"slug": "regresion", "name": "Regresión y recuerdos"},
+    {"slug": "metodos", "name": "Métodos y práctica"},
+    {"slug": "casos", "name": "Casos y experiencias"}
+  ],
+  "authors": [
+    {
+      "slug": "brian-weiss",
+      "name": "Brian Weiss",
+      "area": "Psiquiatría · regresión",
+      "obra_clave": "Muchas vidas, muchos maestros",
+      "descripcion": "Psiquiatra y autor conocido por Muchas vidas, muchos maestros y por su divulgación de la regresión a vidas pasadas.",
+      "ficha": "completa",
+      "page": "autores/brian-weiss/",
+      "portrait": {
+        "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/BLWEISS.jpg",
+        "alt": "Brian Weiss",
+        "credit_label": "Fotografía: brianweissfan, Wikimedia Commons.",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BLWEISS.jpg",
+        "license_label": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "license_page": "licencias-de-recursos/#brian-weiss"
+      },
+      "works": [
+        {"slug": "muchas-vidas-muchos-maestros", "topics": ["regresion", "casos"]},
+        {"slug": "lazos-de-amor", "topics": ["regresion", "casos"]},
+        {"slug": "a-traves-del-tiempo", "topics": ["regresion", "metodos"]},
+        {"slug": "los-mensajes-de-los-sabios", "topics": ["regresion", "metodos"]},
+        {"slug": "muchos-cuerpos-una-misma-alma", "topics": ["vida-entre-vidas", "metodos"]},
+        {"slug": "eliminar-el-estres", "topics": ["metodos"]},
+        {"slug": "meditacion", "topics": ["metodos"]},
+        {"slug": "espejos-del-tiempo", "topics": ["regresion", "metodos"]},
+        {"slug": "los-milagros-existen", "topics": ["casos"]}
+      ]
+    },
+    {
+      "slug": "michael-newton",
+      "name": "Michael Newton",
+      "area": "Vida entre vidas",
+      "obra_clave": "El viaje de las almas",
+      "descripcion": "Hipnoterapeuta conocido por su trabajo sobre regresiones espirituales y experiencias descritas como vida entre vidas.",
+      "ficha": "completa",
+      "page": "autores/michael-newton/",
+      "portrait": {
+        "src": "assets/images/webp/llewellyn-llewellyn-michael-newton-retrato-autor-819w.webp",
+        "srcset": "assets/images/webp/llewellyn-llewellyn-michael-newton-retrato-autor-400w.webp 400w, assets/images/webp/llewellyn-llewellyn-michael-newton-retrato-autor-819w.webp 819w",
+        "alt": "Retrato de Michael Newton",
+        "credit_label": "Fotografía: cortesía de Llewellyn. Uso autorizado el 15/09/2026.",
+        "source_url": "https://www.llewellyn.com/blog/2016/10/author-michael-newton-has-passed/",
+        "license_page": "licencias-de-recursos/#michael-newton"
+      },
+      "works": [
+        {"slug": "el-viaje-de-las-almas", "topics": ["vida-entre-vidas", "casos"]},
+        {"slug": "el-destino-de-las-almas", "topics": ["vida-entre-vidas", "casos"]},
+        {"slug": "life-between-lives", "topics": ["vida-entre-vidas", "metodos"]},
+        {"slug": "memorias-de-las-almas", "topics": ["vida-entre-vidas", "casos"]}
+      ]
+    },
+    {
+      "slug": "roger-j-woolger",
+      "name": "Roger J. Woolger",
+      "area": "Enfoque junguiano",
+      "obra_clave": "Other Lives, Other Selves",
+      "descripcion": "Analista junguiano y terapeuta de regresión que desarrolló el enfoque Deep Memory Process.",
+      "ficha": "pendiente",
+      "page": "autores/roger-j-woolger/",
+      "placeholder_icon": "male",
+      "works": [
+        {"slug": "other-lives-other-selves", "title": "Other Lives, Other Selves", "topics": ["regresion", "metodos"]},
+        {"slug": "healing-your-past-lives", "title": "Healing Your Past Lives", "topics": ["regresion", "metodos"]}
+      ]
+    },
+    {
+      "slug": "morris-netherton",
+      "name": "Morris Netherton",
+      "area": "Pioneros",
+      "obra_clave": "Past Lives Therapy",
+      "descripcion": "Uno de los pioneros de la terapia de vidas pasadas y coautor de Past Lives Therapy.",
+      "ficha": "pendiente",
+      "page": "autores/morris-netherton/",
+      "placeholder_icon": "male",
+      "works": [
+        {"slug": "past-lives-therapy", "title": "Past Lives Therapy", "topics": ["regresion", "metodos", "casos"]}
+      ]
+    },
+    {
+      "slug": "edith-fiore",
+      "name": "Edith Fiore",
+      "area": "Hipnosis clínica",
+      "obra_clave": "You Have Been Here Before",
+      "descripcion": "Psicóloga e hipnoterapeuta vinculada a la literatura temprana sobre regresión a vidas pasadas.",
+      "ficha": "pendiente",
+      "page": "autores/edith-fiore/",
+      "placeholder_icon": "female",
+      "works": [
+        {"slug": "you-have-been-here-before", "title": "You Have Been Here Before", "topics": ["regresion", "casos"]},
+        {"slug": "the-unquiet-dead", "title": "The Unquiet Dead", "topics": ["casos"]}
+      ]
+    },
+    {
+      "slug": "hans-tendam",
+      "name": "Hans TenDam",
+      "area": "Formación y método",
+      "obra_clave": "Exploring Reincarnation",
+      "descripcion": "Autor y formador vinculado al desarrollo de la escuela neerlandesa de terapia regresiva.",
+      "ficha": "pendiente",
+      "page": "autores/hans-tendam/",
+      "placeholder_icon": "male",
+      "works": [
+        {"slug": "exploring-reincarnation", "title": "Exploring Reincarnation", "topics": ["regresion", "metodos"]},
+        {"slug": "deep-healing-and-transformation", "title": "Deep Healing and Transformation", "topics": ["metodos", "casos"]}
+      ]
+    },
+    {
+      "slug": "winafred-blake-lucas",
+      "name": "Winafred Blake Lucas",
+      "area": "Formación profesional",
+      "obra_clave": "Regression Therapy",
+      "descripcion": "Psicóloga, terapeuta y formadora; figura clave en la sistematización profesional de la terapia regresiva.",
+      "ficha": "pendiente",
+      "page": "autores/winafred-blake-lucas/",
+      "placeholder_icon": "female",
+      "works": [
+        {"slug": "regression-therapy-a-handbook-for-professionals", "title": "Regression Therapy: A Handbook for Professionals", "topics": ["regresion", "metodos"]}
+      ]
+    },
+    {
+      "slug": "joel-l-whitton",
+      "name": "Joel L. Whitton",
+      "area": "Psiquiatría · vida entre vidas",
+      "obra_clave": "Life Between Life",
+      "descripcion": "Psiquiatra canadiense y coautor de una de las obras tempranas sobre experiencias descritas entre vidas.",
+      "ficha": "pendiente",
+      "page": "autores/joel-l-whitton/",
+      "placeholder_icon": "male",
+      "works": [
+        {"slug": "life-between-life", "title": "Life Between Life", "topics": ["vida-entre-vidas", "casos"]}
+      ]
+    },
+    {
+      "slug": "helen-wambach",
+      "name": "Helen Wambach",
+      "area": "Regresión e investigación",
+      "obra_clave": "Vida antes de la vida",
+      "descripcion": "Psicóloga que utilizó regresiones hipnóticas con grupos numerosos y publicó resultados sobre vidas pasadas y experiencias anteriores al nacimiento.",
+      "ficha": "pendiente",
+      "page": "autores/helen-wambach/",
+      "placeholder_icon": "female",
+      "works": [
+        {"slug": "reliving-past-lives", "title": "Reliving Past Lives: The Evidence Under Hypnosis", "topics": ["regresion", "casos"]},
+        {"slug": "vida-antes-de-la-vida", "title": "Vida antes de la vida", "topics": ["vida-entre-vidas", "casos"]}
+      ]
+    },
+    {
+      "slug": "ian-stevenson",
+      "name": "Ian Stevenson",
+      "area": "Recuerdos espontáneos",
+      "obra_clave": "Twenty Cases Suggestive of Reincarnation",
+      "descripcion": "Psiquiatra de la Universidad de Virginia que investigó durante décadas casos de niños que afirmaban recordar vidas anteriores.",
+      "ficha": "pendiente",
+      "page": "autores/ian-stevenson/",
+      "portrait": {
+        "src": "assets/images/webp/wikimedia-desconocido-ian-stevenson-retrato-1952-883x1145.webp",
+        "alt": "Retrato de Ian Stevenson publicado en Postgraduate Medicine en 1952",
+        "credit_label": "Fotografía de Ian Stevenson, autor desconocido, publicada en Postgraduate Medicine (1952).",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ian_Stevenson_(Postgraduate_Medicine,_1952).jpg",
+        "credit_source_label": "Fuente: Wikimedia Commons",
+        "license_label": "Dominio público"
+      },
+      "works": [
+        {"slug": "twenty-cases-suggestive-of-reincarnation", "title": "Twenty Cases Suggestive of Reincarnation", "topics": ["regresion", "casos"]},
+        {"slug": "children-who-remember-previous-lives", "title": "Children Who Remember Previous Lives", "topics": ["regresion", "casos"]},
+        {"slug": "cases-of-the-reincarnation-type", "title": "Cases of the Reincarnation Type", "topics": ["regresion", "casos"]},
+        {"slug": "where-reincarnation-and-biology-intersect", "title": "Where Reincarnation and Biology Intersect", "topics": ["regresion", "casos"]}
+      ]
+    },
+    {
+      "slug": "jim-b-tucker",
+      "name": "Jim B. Tucker",
+      "area": "Psiquiatría infantil",
+      "obra_clave": "Life Before Life",
+      "descripcion": "Psiquiatra infantil de la Universidad de Virginia que continúa la investigación de casos de niños con recuerdos espontáneos.",
+      "ficha": "pendiente",
+      "page": "autores/jim-b-tucker/",
+      "placeholder_icon": "male",
+      "works": [
+        {"slug": "life-before-life", "title": "Life Before Life", "topics": ["regresion", "casos"]},
+        {"slug": "return-to-life", "title": "Return to Life", "topics": ["regresion", "casos"]},
+        {"slug": "before", "title": "Before", "topics": ["regresion", "casos"]}
+      ]
+    },
+    {
+      "slug": "erlendur-haraldsson",
+      "name": "Erlendur Haraldsson",
+      "area": "Psicología · supervivencia",
+      "obra_clave": "I Saw a Light and Came Here",
+      "descripcion": "Psicólogo islandés que investigó recuerdos infantiles de vidas anteriores y otros fenómenos relacionados con la supervivencia de la conciencia.",
+      "ficha": "pendiente",
+      "page": "autores/erlendur-haraldsson/",
+      "placeholder_icon": "male",
+      "works": [
+        {"slug": "i-saw-a-light-and-came-here", "title": "I Saw a Light and Came Here", "topics": ["regresion", "casos"]}
+      ]
+    },
+    {
+      "slug": "raymond-a-moody",
+      "name": "Raymond A. Moody",
+      "area": "ECM y conciencia",
+      "obra_clave": "Vida después de la vida",
+      "descripcion": "Médico y filósofo, autor de Vida después de la vida, obra que popularizó el término experiencia cercana a la muerte.",
+      "ficha": "pendiente",
+      "page": "autores/raymond-a-moody/",
+      "portrait": {
+        "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Raymond_Moody_1_(cropped).jpg",
+        "alt": "Raymond A. Moody",
+        "credit_label": "Fotografía: Ehabich, Wikimedia Commons.",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Raymond_Moody_1_(cropped).jpg",
+        "license_label": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "license_page": "licencias-de-recursos/#raymond-a-moody"
+      },
+      "works": [
+        {"slug": "vida-despues-de-la-vida", "title": "Vida después de la vida", "topics": ["vida-entre-vidas", "casos"]},
+        {"slug": "reflections-on-life-after-life", "title": "Reflections on Life After Life", "topics": ["vida-entre-vidas", "casos"]},
+        {"slug": "coming-back", "title": "Coming Back", "topics": ["regresion", "casos"]}
+      ]
+    }
+  ]
+}
