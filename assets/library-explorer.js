@@ -40,6 +40,10 @@
     if (el) el.scrollIntoView({block: 'start', behavior: reduce ? 'auto' : 'smooth'});
   }
 
+  function closeImageCredits() {
+    document.querySelectorAll('.image-credit[open]').forEach(details => { details.open = false; });
+  }
+
   function formatChecked(value) {
     if (!value) return 'pendiente de la primera actualización diaria';
     const date = new Date(value);
@@ -396,11 +400,12 @@
             : null,
           last_checked: (lib && lib.last_checked) || (libraryData[a.slug] && libraryData[a.slug].last_checked) || (availabilityData && availabilityData.last_checked) || null,
           hasDaily: Boolean(bicaWork),
-          isCatalogued: Boolean(page || lib),
+          hasDetailPage: Boolean(page || lib),
+          isCatalogued: true,
           hasPhysical: Boolean(summary && Number(summary.copies || 0) > 0),
           availabilityNote: (libraryData[a.slug] && libraryData[a.slug].availability_note) || '',
           author: {slug: a.slug, name: a.name},
-          page: page || lib ? `autores/${a.slug}/libros/${w.slug}/` : a.page
+          page: page || lib ? `autores/${a.slug}/libros/${w.slug}/` : null
         };
       });
       return Object.assign({}, a, {works});
@@ -486,7 +491,7 @@
     const el = document.createElement('article');
     el.className = 'book-card';
     el.dataset.bookCard = w.key;
-    if (!w.isCatalogued) {
+    if (!w.hasDetailPage) {
       el.classList.add('is-pending');
     }
 
@@ -508,17 +513,15 @@
         <div class="book-card-meta">
           ${w.hasPhysical ? availabilityMarkup(w.summary.available, w.summary.copies) : ''}
           ${w.archive.length ? '<span class="book-card-ia-label">Lectura online</span>' : ''}
-          ${!w.isCatalogued ? `<a class="book-card-author-link" href="${esc(w.page)}">Ver en la ficha del autor</a>` : ''}
+          ${!w.hasDetailPage ? '<span class="book-card-author-link">Ficha inicial</span>' : ''}
         </div>
         ${w.topics.length ? `<div class="book-card-topics">${w.topics.map(t => `<span class="book-card-topic">${esc(t.name)}</span>`).join('')}</div>` : ''}
       </div>
-      ${w.isCatalogued ? `<button type="button" class="book-card-open-hint" data-book-open aria-label="Abrir ficha de ${esc(w.title)}, de ${esc(w.author.name)}"></button>` : ''}`;
+      <button type="button" class="book-card-open-hint" data-book-open aria-label="Abrir ficha de ${esc(w.title)}, de ${esc(w.author.name)}"></button>`;
 
-    if (w.isCatalogued) {
-      el.querySelector('[data-book-open]').addEventListener('click', () => {
-        if (Date.now() >= suppressBookClickUntil) openBook(w.key);
-      });
-    }
+    el.querySelector('[data-book-open]').addEventListener('click', () => {
+      if (Date.now() >= suppressBookClickUntil) openBook(w.key);
+    });
     return el;
   }
 
@@ -592,6 +595,7 @@
     let startX = 0;
     let startLeft = 0;
     let moved = false;
+    let pendingBookKey = null;
 
     row.addEventListener('pointerdown', e => {
       if (e.pointerType !== 'mouse' || e.button !== 0) return;
@@ -600,6 +604,9 @@
       startX = e.clientX;
       startLeft = row.scrollLeft;
       moved = false;
+      pendingBookKey = e.target.closest && e.target.closest('[data-book-card]')
+        ? e.target.closest('[data-book-card]').dataset.bookCard
+        : null;
       row.classList.add('is-dragging');
       row.setPointerCapture(pointerId);
     });
@@ -612,8 +619,10 @@
     const finish = e => {
       if (e.pointerId !== pointerId) return;
       if (moved) suppressBookClickUntil = Date.now() + 180;
+      if (!moved && pendingBookKey) openBook(pendingBookKey);
       row.classList.remove('is-dragging');
       pointerId = null;
+      pendingBookKey = null;
     };
     row.addEventListener('pointerup', finish);
     row.addEventListener('pointercancel', finish);
@@ -668,10 +677,10 @@
 
     const meta = document.createElement('p');
     meta.className = 'library-shelf-meta';
-    const conFicha = a.works.filter(w => w.isCatalogued).length;
-    meta.textContent = conFicha === a.works.length
-      ? `${a.works.length} ${a.works.length === 1 ? 'obra' : 'obras'} catalogadas`
-      : `${a.works.length} ${a.works.length === 1 ? 'obra seleccionada' : 'obras seleccionadas'} · ${conFicha} con ficha completa`;
+    const completas = a.works.filter(w => w.hasDetailPage).length;
+    meta.textContent = completas === a.works.length
+      ? `${a.works.length} ${a.works.length === 1 ? 'obra' : 'obras'} con ficha completa`
+      : `${a.works.length} ${a.works.length === 1 ? 'obra' : 'obras'} con ficha · ${completas} ${completas === 1 ? 'completa' : 'completas'}`;
     section.appendChild(meta);
     return section;
   }
@@ -711,6 +720,9 @@
   }
 
   function renderShelves() {
+    closeImageCredits();
+    document.body.classList.remove('library-book-active');
+    root.classList.remove('is-book-open');
     shelvesEl.hidden = false;
     bookViewEl.hidden = true;
     shelvesEl.innerHTML = '';
@@ -746,20 +758,26 @@
   function openBook(key) {
     const work = findWork(key);
     if (!work) return;
-    location.hash = `libro=${key}`;
+    history.pushState({libraryBook: key}, '', `#libro=${key}`);
+    renderBook(work);
   }
 
   function renderBook(work) {
+    closeImageCredits();
+    document.body.classList.add('library-book-active');
+    root.classList.add('is-book-open');
     bookViewEl.innerHTML = bookOpenHTML(work);
     bookViewEl.hidden = false;
     shelvesEl.hidden = true;
 
     const back = bookViewEl.querySelector('[data-book-back]');
     if (back) back.addEventListener('click', () => {
-      if (history.length > 1 && location.hash) {
+      if (history.state && history.state.libraryBook) {
         history.back();
       } else {
-        location.hash = '';
+        history.replaceState(null, '', `${location.pathname}${location.search}`);
+        renderShelves();
+        smoothScroll(root);
       }
     });
 
@@ -769,6 +787,18 @@
     if (work.hasDaily) {
       renderAvailabilityInto(work.slug, bookViewEl.querySelector('[data-island-status]'));
     }
+
+    bookViewEl.querySelectorAll('[data-book-topic]').forEach(button => {
+      button.addEventListener('click', () => {
+        state.view = 'temas';
+        state.query = button.dataset.bookTopic || '';
+        if (searchInput) searchInput.value = state.query;
+        history.replaceState(null, '', `${location.pathname}${location.search}`);
+        renderControlState();
+        renderShelves();
+        smoothScroll(root);
+      });
+    });
 
     bookViewEl.querySelectorAll('[data-book-open]').forEach(button => {
       button.addEventListener('click', () => {
@@ -797,8 +827,9 @@
 
   function bookOpenHTML(w) {
     const lang = w.languages && w.languages.length ? w.languages[0] : 'es';
+    const author = authors.find(a => a.slug === w.author.slug) || null;
     const tags = [
-      ...w.topics.map(t => `<span class="book-open-topic">${esc(t.name)}</span>`),
+      ...w.topics.map(t => `<button type="button" class="book-open-topic" data-book-topic="${esc(t.name)}">${esc(t.name)}</button>`),
       `<span class="book-open-topic">${esc(lang.toUpperCase())}</span>`
     ].join('');
     const summaries = w.summary;
@@ -820,12 +851,13 @@
 
     return `
       <div class="book-open-bar">
-        <button type="button" class="book-open-back" data-book-back aria-label="Volver a la colección">← Volver a la colección</button>
+        <a class="book-open-library-link" href="/biblioteca-de-terapia-regresiva/">Biblioteca</a>
         <span class="book-open-path">Biblioteca · ${esc(w.author.name)} · ${esc(w.title)}</span>
       </div>
       <article class="book-open">
         <div class="book-open-hero">
           <div class="book-open-cover-col">
+            <button type="button" class="book-open-back" data-book-back aria-label="Volver al estante de ${esc(w.author.name)}">← Volver al estante de ${esc(w.author.name)}</button>
             ${w.cover
               ? `<figure class="book-cover-feature image-with-credit">
                   <button type="button" class="book-open-cover-zoom" data-book-cover-zoom aria-label="Ampliar portada de ${esc(w.title)}">
@@ -839,14 +871,18 @@
                   </details>
                 </figure>`
               : `<div class="book-cover is-placeholder" style="width:min(210px,100%);aspect-ratio:2/3"><span class="book-cover-mono" aria-hidden="true">${esc(monogram(w.title))}</span><span class="book-cover-placeholder-note">Portada pendiente de verificar</span></div>`}
-            <a class="book-open-full-link" href="${esc(w.page)}">Ver la ficha completa de esta obra →</a>
+            ${w.hasDetailPage
+              ? `<a class="book-open-full-link" href="${esc(w.page)}">Abrir la ficha editorial completa →</a>`
+              : '<span class="book-open-full-link is-muted">Edición y portada pendientes de documentar</span>'}
           </div>
           <div class="book-open-copy">
             <div class="eyebrow">Libro de ${esc(w.author.name)}</div>
             <h1>${esc(w.title)}</h1>
             ${w.original_title ? `<p class="book-original-title"><strong>Título original:</strong> <em>${esc(w.original_title)}</em>.</p>` : ''}
             <div class="book-open-tags" aria-label="Temas e idioma">${tags}</div>
-            ${w.lead ? `<p class="lead">${esc(w.lead)}</p>` : ''}
+            ${w.lead
+              ? `<p class="lead">${esc(w.lead)}</p>`
+              : `<p class="lead">Ficha inicial de <em>${esc(w.title)}</em>, una obra seleccionada en el estante de ${esc(w.author.name)}.</p>`}
             <div class="book-primary-actions">
               ${w.archive.length ? '<a href="#book-leer-online">Leer online</a>' : ''}
               <a href="#book-bibliotecas">Solicitar en préstamo</a>
@@ -855,16 +891,27 @@
               <summary>Datos de esta obra</summary>
               <div class="book-edition-details-body">
                 <div class="book-language"><strong>Idioma:</strong> <span class="tag">${esc(lang.toUpperCase())}</span></div>
-                ${w.isbns.length ? `<p><strong>Ediciones e ISBN localizados</strong></p><ul class="book-editions-inline" aria-label="ISBN localizados">${w.isbns.map(isbn => `<li><strong>${esc(isbn)}</strong></li>`).join('')}</ul>` : ''}
+                ${w.isbns.length
+                  ? `<p><strong>Ediciones e ISBN localizados</strong></p><ul class="book-editions-inline" aria-label="ISBN localizados">${w.isbns.map(isbn => `<li><strong>${esc(isbn)}</strong></li>`).join('')}</ul>`
+                  : '<p class="book-notice">Los datos de edición e ISBN están pendientes de verificar.</p>'}
               </div>
             </details>
+            ${author ? `<details class="book-open-flap" open>
+              <summary>Solapa · sobre ${esc(author.name)}</summary>
+              <div class="book-open-flap-inner">
+                ${author.portrait
+                  ? `<img src="${esc(author.portrait.src)}" alt="" loading="lazy">`
+                  : `<span class="book-open-flap-monogram" aria-hidden="true">${esc(monogram(author.name))}</span>`}
+                <div><strong>${esc(author.name)}</strong><p>${esc(author.descripcion || '')}</p><a href="${esc(author.page)}">Explorar su biblioteca →</a></div>
+              </div>
+            </details>` : ''}
           </div>
         </div>
 
         ${w.about.length ? `<section class="book-open-section">
           <h2>Sobre ${esc(w.title)}</h2>
           <div class="book-story">${w.about.map(p => `<p>${esc(p)}</p>`).join('')}</div>
-        </section>` : ''}
+        </section>` : `<section class="book-open-section"><h2>Sobre esta obra</h2><p class="book-notice">La reseña editorial está pendiente de documentación. La ficha se mantiene disponible para conservar la navegación completa de la biblioteca.</p></section>`}
 
         <section class="book-open-section">
           <h2>Disponibilidad de ${esc(w.title)} en las bibliotecas de Canarias</h2>
@@ -880,7 +927,7 @@
         </section>
 
         <section class="book-open-section" id="book-leer-online">
-          <h2>Leer ${esc(w.title)} online gratis</h2>
+          <h2>Leer o consultar ${esc(w.title)} online</h2>
           <p>Internet Archive funciona como una biblioteca digital. El préstamo o la consulta dependen de la disponibilidad del ejemplar.</p>
           <ul class="book-resource-list archive-copy-grid">${archiveItems}</ul>
         </section>
@@ -1000,6 +1047,10 @@
       }
       return;
     }
+    if (!openBookFromHash()) renderShelves();
+  });
+
+  window.addEventListener('popstate', () => {
     if (!openBookFromHash()) renderShelves();
   });
 

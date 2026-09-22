@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "generated_at": "2026-09-21",
   "kind": "exploracion-biblioteca",
-  "notice": "Índice de exploración de la biblioteca. Los datos editoriales y de portada de cada obra se resuelven desde data/library y data/book-pages; las obras restantes se marcan como placeholders explícitos hasta disponer de ficha completa.",
+  "notice": "Índice de exploración de la biblioteca. Todas las obras disponen de ficha dentro del explorador; los datos editoriales, de portada, lectura online y disponibilidad se amplían solo cuando han sido verificados.",
   "topics": [
     {"slug": "vida-entre-vidas", "name": "Vida entre vidas"},
     {"slug": "regresion", "name": "Regresión y recuerdos"},

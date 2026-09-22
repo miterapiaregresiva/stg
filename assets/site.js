@@ -90,6 +90,14 @@ document.addEventListener('keydown',event=>{
   });
 });
 
+document.addEventListener('toggle',event=>{
+  const opened=event.target;
+  if(!(opened instanceof HTMLDetailsElement)||!opened.matches('.image-credit')||!opened.open)return;
+  document.querySelectorAll('.image-credit[open]').forEach(panel=>{
+    if(panel!==opened)panel.open=false;
+  });
+},true);
+
 window.addEventListener('hashchange',()=>{
   requestAnimationFrame(()=>scrollToAnchoredSection(location.hash,{behavior:'auto'}));
 });
