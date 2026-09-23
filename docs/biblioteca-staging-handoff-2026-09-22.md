@@ -76,12 +76,13 @@ Trasladar a staging la experiencia de biblioteca probada en `C:\dev\GofioDesign\
 - Generar páginas completas con `scripts/generate-book-pages.mjs` cuando los datos estén listos.
 - Adaptar también las páginas HTML completas al mismo lenguaje visual del playground; por ahora la adaptación principal vive en el explorador.
 
-### 3. Completar portadas y créditos
+### 3. Completar retratos y revisar créditos
 
-- Conectar las portadas locales ya disponibles para Helen Wambach, Ian Stevenson y Raymond A. Moody.
-- Conseguir y documentar las portadas restantes mediante fuentes editoriales o bibliográficas fiables.
-- Mantener en cada cubierta fuente, enlace y atribución cuando corresponda.
-- No usar una portada encontrada sin confirmar que representa la edición citada.
+- Las 35 obras ya tienen portada en el explorador.
+- Las 16 portadas externas se guardaron localmente en WebP y conservan la fuente visual en su crédito.
+- Las 6 portadas que ya existían para Helen Wambach, Ian Stevenson y Raymond A. Moody están conectadas.
+- Quedan pendientes 9 retratos de autores con procedencia suficientemente documentada.
+- Revisar la fuente exacta de la copia local de `Where Reincarnation and Biology Intersect`.
 
 ### 4. Revisión responsive y accesible final
 
@@ -106,4 +107,3 @@ Trasladar a staging la experiencia de biblioteca probada en `C:\dev\GofioDesign\
 3. Iniciar el servidor local y abrir `/biblioteca-de-terapia-regresiva/`.
 4. Continuar primero por el emparejamiento de libros con RED BICA.
 5. Mantener separados los datos verificados de los textos y recursos pendientes.
-

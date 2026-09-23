@@ -369,7 +369,7 @@
         const lib = (libraryData[a.slug] && (libraryData[a.slug].works || []).find(x => x.slug === w.slug)) || null;
         const bicaWork = availabilityData && availabilityData.works ? availabilityData.works[w.slug] : null;
         const summary = bicaWork || lib;
-        const cover = page && page.cover ? page.cover : null;
+        const cover = page && page.cover ? page.cover : (w.cover || null);
         let title = (page && page.title) || (lib && lib.title) || w.title || slugTitle(w.slug);
         const hasEditableLang = Array.isArray((page && page.languages)) ? page.languages.length : false;
         let languages = hasEditableLang
@@ -380,16 +380,16 @@
           slug: w.slug,
           topics: (w.topics || []).map(t => topics.find(x => x.slug === t)).filter(Boolean),
           title,
-          original_title: (page && page.original_title) || null,
+          original_title: (page && page.original_title) || w.original_title || null,
           languages,
-          lead: (page && page.lead) || '',
+          lead: (page && page.lead) || w.lead || '',
           about: (page && page.about) || [],
           primary_isbn: (page && page.primary_isbn) || '',
           isbns: (page && page.isbns) || [],
           cover: cover
             ? {src: cover.src, alt: cover.alt || `Portada de ${title}`, credit_source: cover.credit_source, credit_url: cover.credit_url}
             : null,
-          archive: (lib && lib.archive) || [],
+          archive: (lib && lib.archive) || w.archive || [],
           summary: summary
             ? {
                 bica_records: summary.bica_records,

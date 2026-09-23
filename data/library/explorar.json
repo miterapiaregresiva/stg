@@ -72,8 +72,8 @@
       "page": "autores/roger-j-woolger/",
       "placeholder_icon": "male",
       "works": [
-        {"slug": "other-lives-other-selves", "title": "Other Lives, Other Selves", "topics": ["regresion", "metodos"]},
-        {"slug": "healing-your-past-lives", "title": "Healing Your Past Lives", "topics": ["regresion", "metodos"]}
+        {"slug": "other-lives-other-selves", "title": "Other Lives, Other Selves", "topics": ["regresion", "metodos"], "cover": {"src": "/assets/images/webp/cloudfront-roger-j-woolger-other-lives-other-selves-portada.webp", "alt": "Portada de Other Lives, Other Selves, de Roger J. Woolger", "credit_source": "CloudFront", "credit_url": "https://d32vymxhv9fq6b.cloudfront.net/images/books/large/97818/9781855383111.jpg"}},
+        {"slug": "healing-your-past-lives", "title": "Healing Your Past Lives", "topics": ["regresion", "metodos"], "cover": {"src": "/assets/images/webp/amazon-roger-j-woolger-healing-your-past-lives-portada.webp", "alt": "Portada de Healing Your Past Lives, de Roger J. Woolger", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/71pB8Rv0-AL._SL1500_.jpg"}}
       ]
     },
     {
@@ -86,7 +86,7 @@
       "page": "autores/morris-netherton/",
       "placeholder_icon": "male",
       "works": [
-        {"slug": "past-lives-therapy", "title": "Past Lives Therapy", "topics": ["regresion", "metodos", "casos"]}
+        {"slug": "past-lives-therapy", "title": "Past Lives Therapy", "topics": ["regresion", "metodos", "casos"], "cover": {"src": "/assets/images/webp/amazon-morris-netherton-past-lives-therapy-portada.webp", "alt": "Portada de Past Lives Therapy, de Morris Netherton y Nancy Shiffrin", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/51WSNfvoMFL.jpg"}}
       ]
     },
     {
@@ -99,8 +99,8 @@
       "page": "autores/edith-fiore/",
       "placeholder_icon": "female",
       "works": [
-        {"slug": "you-have-been-here-before", "title": "You Have Been Here Before", "topics": ["regresion", "casos"]},
-        {"slug": "the-unquiet-dead", "title": "The Unquiet Dead", "topics": ["casos"]}
+        {"slug": "you-have-been-here-before", "title": "You Have Been Here Before", "topics": ["regresion", "casos"], "cover": {"src": "/assets/images/webp/ebay-edith-fiore-you-have-been-here-before-portada.webp", "alt": "Portada de You Have Been Here Before, de Edith Fiore", "credit_source": "eBay", "credit_url": "https://i.ebayimg.com/images/g/WvoAAOSwx0NmxCLa/s-l1600.webp"}, "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/youhavebeenhereb00fior"}]},
+        {"slug": "the-unquiet-dead", "title": "The Unquiet Dead", "topics": ["casos"], "cover": {"src": "/assets/images/webp/penguin-random-house-edith-fiore-the-unquiet-dead-portada.webp", "alt": "Portada de The Unquiet Dead, de Edith Fiore", "credit_source": "Penguin Random House", "credit_url": "https://insight.penguinrandomhouse.com/fullpage.do?pContentType=JPG&pName=fullpage&pISBN=9780345460875&pPageID=1"}}
       ]
     },
     {
@@ -113,8 +113,8 @@
       "page": "autores/hans-tendam/",
       "placeholder_icon": "male",
       "works": [
-        {"slug": "exploring-reincarnation", "title": "Exploring Reincarnation", "topics": ["regresion", "metodos"]},
-        {"slug": "deep-healing-and-transformation", "title": "Deep Healing and Transformation", "topics": ["metodos", "casos"]}
+        {"slug": "exploring-reincarnation", "title": "Exploring Reincarnation", "topics": ["regresion", "metodos"], "cover": {"src": "/assets/images/webp/abebooks-hans-tendam-exploring-reincarnation-portada.webp", "alt": "Portada de Exploring Reincarnation, de Hans TenDam", "credit_source": "AbeBooks", "credit_url": "https://pictures.abebooks.com/isbn/9780712660204-uk.jpg"}},
+        {"slug": "deep-healing-and-transformation", "title": "Deep Healing and Transformation", "topics": ["metodos", "casos"], "cover": {"src": "/assets/images/webp/amazon-hans-tendam-deep-healing-and-transformation-portada.webp", "alt": "Portada de Deep Healing and Transformation, de Hans TenDam", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/61FTbROChcL._SL1360_.jpg"}}
       ]
     },
     {
@@ -127,7 +127,7 @@
       "page": "autores/winafred-blake-lucas/",
       "placeholder_icon": "female",
       "works": [
-        {"slug": "regression-therapy-a-handbook-for-professionals", "title": "Regression Therapy: A Handbook for Professionals", "topics": ["regresion", "metodos"]}
+        {"slug": "regression-therapy-a-handbook-for-professionals", "title": "Regression Therapy: A Handbook for Professionals", "topics": ["regresion", "metodos"], "cover": {"src": "/assets/images/webp/amazon-winafred-blake-lucas-regression-therapy-portada.webp", "alt": "Portada de Regression Therapy: A Handbook for Professionals, editado por Winafred Blake Lucas", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/412Dh8ttpbL.jpg"}, "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/regressiontherap01luca"}]}
       ]
     },
     {
@@ -140,7 +140,7 @@
       "page": "autores/joel-l-whitton/",
       "placeholder_icon": "male",
       "works": [
-        {"slug": "life-between-life", "title": "Life Between Life", "topics": ["vida-entre-vidas", "casos"]}
+        {"slug": "life-between-life", "title": "Life Between Life", "topics": ["vida-entre-vidas", "casos"], "cover": {"src": "/assets/images/webp/academia-joel-l-whitton-life-between-life-portada.webp", "alt": "Portada de La vida entre las vidas, de Joel L. Whitton y Joe Fisher", "credit_source": "Academia.edu", "credit_url": "https://www.academia.edu/39635266/LA_VIDA_ENTRE_LAS_VIDAS_WHITTON"}}
       ]
     },
     {
@@ -153,8 +153,23 @@
       "page": "autores/helen-wambach/",
       "placeholder_icon": "female",
       "works": [
-        {"slug": "reliving-past-lives", "title": "Reliving Past Lives: The Evidence Under Hypnosis", "topics": ["regresion", "casos"]},
-        {"slug": "vida-antes-de-la-vida", "title": "Vida antes de la vida", "topics": ["vida-entre-vidas", "casos"]}
+        {"slug": "reliving-past-lives", "title": "Reliving Past Lives: The Evidence Under Hypnosis", "topics": ["regresion", "casos"], "cover": {"src": "/assets/images/webp/amazon-helen-wambach-reliving-past-lives-portada.webp", "alt": "Portada de Reliving Past Lives: The Evidence Under Hypnosis, de Helen Wambach", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/81+Z+pSEKAL._SL1500_.jpg"}, "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/relivingpastlive00wamb"}]},
+        {
+          "slug": "vida-antes-de-la-vida",
+          "title": "Vida antes de la vida",
+          "original_title": "Life Before Life",
+          "topics": ["vida-entre-vidas", "casos"],
+          "cover": {
+            "src": "/assets/images/webp/internet-archive-helen-wambach-vida-antes-de-la-vida-portada-579x834.webp",
+            "alt": "Portada de Vida antes de la vida, de Helen Wambach",
+            "credit_source": "Internet Archive",
+            "credit_url": "https://archive.org/details/vidaantesdelavid00wamb"
+          },
+          "archive": [
+            {"title": "Edición en español", "type": "borrow", "url": "https://archive.org/details/vidaantesdelavid00wamb"},
+            {"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/lifebeforelife00hele"}
+          ]
+        }
       ]
     },
     {
@@ -174,10 +189,53 @@
         "license_label": "Dominio público"
       },
       "works": [
-        {"slug": "twenty-cases-suggestive-of-reincarnation", "title": "Twenty Cases Suggestive of Reincarnation", "topics": ["regresion", "casos"]},
-        {"slug": "children-who-remember-previous-lives", "title": "Children Who Remember Previous Lives", "topics": ["regresion", "casos"]},
-        {"slug": "cases-of-the-reincarnation-type", "title": "Cases of the Reincarnation Type", "topics": ["regresion", "casos"]},
-        {"slug": "where-reincarnation-and-biology-intersect", "title": "Where Reincarnation and Biology Intersect", "topics": ["regresion", "casos"]}
+        {
+          "slug": "twenty-cases-suggestive-of-reincarnation",
+          "title": "Twenty Cases Suggestive of Reincarnation",
+          "topics": ["regresion", "casos"],
+          "cover": {
+            "src": "/assets/images/webp/internet-archive-ian-stevenson-twenty-cases-suggestive-of-reincarnation-portada-438x670.webp",
+            "alt": "Portada de Twenty Cases Suggestive of Reincarnation, de Ian Stevenson",
+            "credit_source": "Internet Archive",
+            "credit_url": "https://archive.org/details/twentycasessugge0000stev"
+          },
+          "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/twentycasessugge0000stev"}]
+        },
+        {
+          "slug": "children-who-remember-previous-lives",
+          "title": "Children Who Remember Previous Lives",
+          "topics": ["regresion", "casos"],
+          "cover": {
+            "src": "/assets/images/webp/internet-archive-ian-stevenson-children-who-remember-previous-lives-portada-426x671.webp",
+            "alt": "Portada de Children Who Remember Previous Lives, de Ian Stevenson",
+            "credit_source": "Internet Archive",
+            "credit_url": "https://archive.org/details/childrenwhoremem0000stev"
+          },
+          "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/childrenwhoremem0000stev"}]
+        },
+        {
+          "slug": "cases-of-the-reincarnation-type",
+          "title": "Cases of the Reincarnation Type",
+          "topics": ["regresion", "casos"],
+          "cover": {
+            "src": "/assets/images/webp/internet-archive-ian-stevenson-cases-of-the-reincarnation-type-portada-452x668.webp",
+            "alt": "Portada de Cases of the Reincarnation Type, de Ian Stevenson",
+            "credit_source": "Internet Archive",
+            "credit_url": "https://archive.org/details/casesofreincarna02stev"
+          },
+          "archive": [{"title": "Volumen en inglés", "type": "borrow", "url": "https://archive.org/details/casesofreincarna02stev"}]
+        },
+        {
+          "slug": "where-reincarnation-and-biology-intersect",
+          "title": "Where Reincarnation and Biology Intersect",
+          "topics": ["regresion", "casos"],
+          "cover": {
+            "src": "/assets/images/webp/internet-archive-ian-stevenson-where-reincarnation-and-biology-intersect-portada-406x669.webp",
+            "alt": "Portada de Where Reincarnation and Biology Intersect, de Ian Stevenson",
+            "credit_source": "Copia local de staging; fuente exacta pendiente de documentar",
+            "credit_url": "/licencias-de-recursos/#portadas-libros"
+          }
+        }
       ]
     },
     {
@@ -190,9 +248,9 @@
       "page": "autores/jim-b-tucker/",
       "placeholder_icon": "male",
       "works": [
-        {"slug": "life-before-life", "title": "Life Before Life", "topics": ["regresion", "casos"]},
-        {"slug": "return-to-life", "title": "Return to Life", "topics": ["regresion", "casos"]},
-        {"slug": "before", "title": "Before", "topics": ["regresion", "casos"]}
+        {"slug": "life-before-life", "title": "Life Before Life", "topics": ["regresion", "casos"], "cover": {"src": "/assets/images/webp/amazon-jim-b-tucker-life-before-life-portada.webp", "alt": "Portada de Life Before Life, de Jim B. Tucker", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/71KCcJVRnUL._SL1500_.jpg"}},
+        {"slug": "return-to-life", "title": "Return to Life", "topics": ["regresion", "casos"], "cover": {"src": "/assets/images/webp/amazon-jim-b-tucker-return-to-life-portada.webp", "alt": "Portada de Return to Life, de Jim B. Tucker", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/81CjNQnVvSL._SL1500_.jpg"}},
+        {"slug": "before", "title": "Before", "topics": ["regresion", "casos"], "cover": {"src": "/assets/images/webp/ebay-jim-b-tucker-before-portada.webp", "alt": "Portada de Before, de Jim B. Tucker", "credit_source": "eBay", "credit_url": "https://i.ebayimg.com/images/g/1WYAAeSwSmdqqV4G/s-l1600.webp"}}
       ]
     },
     {
@@ -205,7 +263,7 @@
       "page": "autores/erlendur-haraldsson/",
       "placeholder_icon": "male",
       "works": [
-        {"slug": "i-saw-a-light-and-came-here", "title": "I Saw a Light and Came Here", "topics": ["regresion", "casos"]}
+        {"slug": "i-saw-a-light-and-came-here", "title": "I Saw a Light and Came Here", "topics": ["regresion", "casos"], "cover": {"src": "/assets/images/webp/amazon-erlendur-haraldsson-i-saw-a-light-and-came-here-portada.webp", "alt": "Portada de I Saw a Light and Came Here, de Erlendur Haraldsson y James G. Matlock", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/81Td05+3UCL._SL1500_.jpg"}}
       ]
     },
     {
@@ -226,9 +284,24 @@
         "license_page": "licencias-de-recursos/#raymond-a-moody"
       },
       "works": [
-        {"slug": "vida-despues-de-la-vida", "title": "Vida después de la vida", "topics": ["vida-entre-vidas", "casos"]},
-        {"slug": "reflections-on-life-after-life", "title": "Reflections on Life After Life", "topics": ["vida-entre-vidas", "casos"]},
-        {"slug": "coming-back", "title": "Coming Back", "topics": ["regresion", "casos"]}
+        {
+          "slug": "vida-despues-de-la-vida",
+          "title": "Vida después de la vida",
+          "original_title": "Life After Life",
+          "topics": ["vida-entre-vidas", "casos"],
+          "cover": {
+            "src": "/assets/images/webp/internet-archive-raymond-moody-life-after-life-edicion-francesa-portada-395x672.webp",
+            "alt": "Portada de una edición francesa de Vida después de la vida, de Raymond A. Moody",
+            "credit_source": "Internet Archive",
+            "credit_url": "https://archive.org/details/lavieapreslaviee0000mood"
+          },
+          "archive": [
+            {"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/lifeafterlifeinv00mood"},
+            {"title": "Edición en francés", "type": "borrow", "url": "https://archive.org/details/lavieapreslaviee0000mood"}
+          ]
+        },
+        {"slug": "reflections-on-life-after-life", "title": "Reflections on Life After Life", "topics": ["vida-entre-vidas", "casos"], "cover": {"src": "/assets/images/webp/amazon-raymond-moody-reflections-on-life-after-life-portada.webp", "alt": "Portada de Reflections on Life After Life, de Raymond A. Moody", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/81BkayYt4mL._SL1500_.jpg"}, "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/reflectionsonlif00mood_1"}]},
+        {"slug": "coming-back", "title": "Coming Back", "topics": ["regresion", "casos"], "cover": {"src": "/assets/images/webp/amazon-raymond-moody-coming-back-portada.webp", "alt": "Portada de Coming Back, de Raymond A. Moody", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/61ArcMIDofL._SL1360_.jpg"}}
       ]
     }
   ]
