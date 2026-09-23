@@ -1,0 +1,19 @@
+{
+  "author": "Raymond A. Moody",
+  "author_slug": "raymond-a-moody",
+  "source": "RED BICA",
+  "works": {
+    "vida-despues-de-la-vida": {
+      "bica_ids": ["590125", "590128", "895250", "590124", "837855"],
+      "isbns": ["8422655764", "9788441411579", "8471665387", "9788441402119"]
+    },
+    "reflections-on-life-after-life": {
+      "bica_ids": ["350705", "288851", "407877"],
+      "isbns": ["9684450036", "8471665840", "8471664091"]
+    },
+    "coming-back": {
+      "bica_ids": ["51812", "407928", "572929"],
+      "isbns": ["8476404409", "8441411654"]
+    }
+  }
+}

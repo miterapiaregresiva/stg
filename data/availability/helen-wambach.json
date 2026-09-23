@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "source": "RED BICA / OpacDiscovery",
+  "source_mode": "public GET only",
+  "author_slug": "helen-wambach",
+  "last_checked": "2026-09-23T19:04:06Z",
+  "refresh_target": "daily",
+  "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
+  "records_checked": 1,
+  "works": {
+    "vida-antes-de-la-vida": {
+      "copies": 3,
+      "available": 3,
+      "islands": {
+        "GC": {
+          "name": "Gran Canaria",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "GC01": {
+              "name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "101": {
+                  "name": "Alexis Ravelo",
+                  "location_code": "S-101",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "LZ": {
+          "name": "Lanzarote",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "LZ03": {
+              "name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "406": {
+                  "name": "Playa Honda",
+                  "location_code": "S-406",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TF": {
+          "name": "Tenerife",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "TF27": {
+              "name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "254": {
+                  "name": "La Matanza de Acentejo",
+                  "location_code": "S-254",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "bica_records": 1,
+      "isbn_count": 1
+    }
+  },
+  "records": [
+    {
+      "bica_id": "445674",
+      "work_slug": "vida-antes-de-la-vida",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNDQ1Njc0",
+      "copies_total": 3,
+      "copies_available": 3,
+      "copies": [
+        {
+          "copy_id": "741044598",
+          "title_id": "445674",
+          "library_id": "GC01",
+          "library_name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "101",
+          "location_code": "S-101",
+          "branch_name": "Alexis Ravelo",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "159.962 WAM vid",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "331016595",
+          "title_id": "445674",
+          "library_id": "LZ03",
+          "library_name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "406",
+          "location_code": "S-406",
+          "branch_name": "Playa Honda",
+          "island_code": "LZ",
+          "island": "Lanzarote",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "159 WAM vid",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "961139151",
+          "title_id": "445674",
+          "library_id": "TF27",
+          "library_name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "254",
+          "location_code": "S-254",
+          "branch_name": "La Matanza de Acentejo",
+          "island_code": "TF",
+          "island": "Tenerife",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "159 WAM vid",
+          "type": "No prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "helen-wambach"
+    }
+  ]
+}

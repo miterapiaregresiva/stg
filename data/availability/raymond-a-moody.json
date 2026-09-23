@@ -1,0 +1,842 @@
+{
+  "schema_version": "1.0",
+  "source": "RED BICA / OpacDiscovery",
+  "source_mode": "public GET only",
+  "author_slug": "raymond-a-moody",
+  "last_checked": "2026-09-23T19:04:06Z",
+  "refresh_target": "daily",
+  "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
+  "records_checked": 11,
+  "works": {
+    "vida-despues-de-la-vida": {
+      "copies": 6,
+      "available": 6,
+      "islands": {
+        "GC": {
+          "name": "Gran Canaria",
+          "copies": 4,
+          "available": 4,
+          "libraries": {
+            "GC07": {
+              "name": "Santa Brígida",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "123": {
+                  "name": "Santa Brígida",
+                  "location_code": "S-123",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            },
+            "GC04": {
+              "name": "Telde. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "148": {
+                  "name": "Gerencia de Jinámar",
+                  "location_code": "S-148",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            },
+            "GC08": {
+              "name": "Santa María de Guía",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "124": {
+                  "name": "Santa María de Guía",
+                  "location_code": "S-124",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            },
+            "GC21": {
+              "name": "Las Palmas de Gran Canaria. Biblioteca Insular de Gran Canaria",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "152": {
+                  "name": "Biblioteca Insular de Gran Canaria",
+                  "location_code": "S-152",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TF": {
+          "name": "Tenerife",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "TF14": {
+              "name": "Santa Brígida",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "226": {
+                  "name": "Candelaria",
+                  "location_code": "S-226",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "LZ": {
+          "name": "Lanzarote",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "LZ04": {
+              "name": "Teguise. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "409": {
+                  "name": "Teguise",
+                  "location_code": "S-409",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "bica_records": 5,
+      "isbn_count": 4
+    },
+    "reflections-on-life-after-life": {
+      "copies": 4,
+      "available": 4,
+      "islands": {
+        "GC": {
+          "name": "Gran Canaria",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "GC02": {
+              "name": "Valsequillo de Gran Canaria",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "173": {
+                  "name": "Valsequillo de Gran Canaria",
+                  "location_code": "S-173",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "FV": {
+          "name": "Fuerteventura",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "FV01": {
+              "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "302": {
+                  "name": "Corralejo",
+                  "location_code": "S-302",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "LZ": {
+          "name": "Lanzarote",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "LZ03": {
+              "name": "San Bartolomé. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "406": {
+                  "name": "Playa Honda",
+                  "location_code": "S-406",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TF": {
+          "name": "Tenerife",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "TF01": {
+              "name": "San Bartolomé. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "201": {
+                  "name": "Biblioteca Municipal Central de Santa Cruz de Tenerife",
+                  "location_code": "S-201",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "bica_records": 3,
+      "isbn_count": 3
+    },
+    "coming-back": {
+      "copies": 3,
+      "available": 3,
+      "islands": {
+        "TF": {
+          "name": "Tenerife",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "TF06": {
+              "name": "Tegueste. Biblioteca Pública Municipal de Tegueste",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "209": {
+                  "name": "Tegueste",
+                  "location_code": "S-209",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "LP": {
+          "name": "La Palma",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "LP02": {
+              "name": "Los Llanos de Aridane",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "502": {
+                  "name": "Los Llanos de Aridane",
+                  "location_code": "S-502",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "GC": {
+          "name": "Gran Canaria",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "GC12": {
+              "name": "Santa Lucía. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "133": {
+                  "name": "Cruce de Sardina",
+                  "location_code": "S-133",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "bica_records": 3,
+      "isbn_count": 2
+    }
+  },
+  "records": [
+    {
+      "bica_id": "590125",
+      "work_slug": "vida-despues-de-la-vida",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNTkwMTI1",
+      "copies_total": 2,
+      "copies_available": 2,
+      "copies": [
+        {
+          "copy_id": "973260120",
+          "title_id": "590125",
+          "library_id": "GC07",
+          "library_name": "Santa Brígida",
+          "branch_id": "123",
+          "location_code": "S-123",
+          "branch_name": "Santa Brígida",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "133 MOO vid",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "391004525",
+          "title_id": "590125",
+          "library_id": "TF14",
+          "library_name": "Santa Brígida",
+          "branch_id": "226",
+          "location_code": "S-226",
+          "branch_name": "Candelaria",
+          "island_code": "TF",
+          "island": "Tenerife",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Sala de Lectura",
+          "signature": "133.2 MOO vid",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "590128",
+      "work_slug": "vida-despues-de-la-vida",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNTkwMTI4",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "591002556",
+          "title_id": "590128",
+          "library_id": "GC04",
+          "library_name": "Telde. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "148",
+          "location_code": "S-148",
+          "branch_name": "Gerencia de Jinámar",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "133 MOO vid",
+          "type": "Prestable",
+          "media": null,
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "895250",
+      "work_slug": "vida-despues-de-la-vida",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvODk1MjUw",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "971267670",
+          "title_id": "895250",
+          "library_id": "GC08",
+          "library_name": "Santa María de Guía",
+          "branch_id": "124",
+          "location_code": "S-124",
+          "branch_name": "Santa María de Guía",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "133.2 MOO vid",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "590124",
+      "work_slug": "vida-despues-de-la-vida",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNTkwMTI0",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "971416071",
+          "title_id": "590124",
+          "library_id": "LZ04",
+          "library_name": "Teguise. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "409",
+          "location_code": "S-409",
+          "branch_name": "Teguise",
+          "island_code": "LZ",
+          "island": "Lanzarote",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Depósito",
+          "signature": "133 MOO vid",
+          "type": "Prestable",
+          "media": null,
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "837855",
+      "work_slug": "vida-despues-de-la-vida",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvODM3ODU1",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "821039281",
+          "title_id": "837855",
+          "library_id": "GC21",
+          "library_name": "Las Palmas de Gran Canaria. Biblioteca Insular de Gran Canaria",
+          "branch_id": "152",
+          "location_code": "S-152",
+          "branch_name": "Biblioteca Insular de Gran Canaria",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "133.2 MOO vid",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "350705",
+      "work_slug": "reflections-on-life-after-life",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMzUwNzA1",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "971271799",
+          "title_id": "350705",
+          "library_id": "GC02",
+          "library_name": "Valsequillo de Gran Canaria",
+          "branch_id": "173",
+          "location_code": "S-173",
+          "branch_name": "Valsequillo de Gran Canaria",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 MOD ref",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "288851",
+      "work_slug": "reflections-on-life-after-life",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMjg4ODUx",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "972808637",
+          "title_id": "288851",
+          "library_id": "FV01",
+          "library_name": "La Oliva. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "302",
+          "location_code": "S-302",
+          "branch_name": "Corralejo",
+          "island_code": "FV",
+          "island": "Fuerteventura",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 MOD ref",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "407877",
+      "work_slug": "reflections-on-life-after-life",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNDA3ODc3",
+      "copies_total": 2,
+      "copies_available": 2,
+      "copies": [
+        {
+          "copy_id": "331016200",
+          "title_id": "407877",
+          "library_id": "LZ03",
+          "library_name": "San Bartolomé. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "406",
+          "location_code": "S-406",
+          "branch_name": "Playa Honda",
+          "island_code": "LZ",
+          "island": "Lanzarote",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 MOO ref",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "971258231",
+          "title_id": "407877",
+          "library_id": "TF01",
+          "library_name": "San Bartolomé. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "201",
+          "location_code": "S-201",
+          "branch_name": "Biblioteca Municipal Central de Santa Cruz de Tenerife",
+          "island_code": "TF",
+          "island": "Tenerife",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Libre acceso",
+          "signature": "2-187 MOO ref",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "51812",
+      "work_slug": "coming-back",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNTE4MTI",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "541017992",
+          "title_id": "51812",
+          "library_id": "TF06",
+          "library_name": "Tegueste. Biblioteca Pública Municipal de Tegueste",
+          "branch_id": "209",
+          "location_code": "S-209",
+          "branch_name": "Tegueste",
+          "island_code": "TF",
+          "island": "Tenerife",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 MOO reg BPMTEGUESTE",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "407928",
+      "work_slug": "coming-back",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNDA3OTI4",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "231018615",
+          "title_id": "407928",
+          "library_id": "LP02",
+          "library_name": "Los Llanos de Aridane",
+          "branch_id": "502",
+          "location_code": "S-502",
+          "branch_name": "Los Llanos de Aridane",
+          "island_code": "LP",
+          "island": "La Palma",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "133.2 MOO reg",
+          "type": "Prestable",
+          "media": null,
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    },
+    {
+      "bica_id": "572929",
+      "work_slug": "coming-back",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNTcyOTI5",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "521033547",
+          "title_id": "572929",
+          "library_id": "GC12",
+          "library_name": "Santa Lucía. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "133",
+          "location_code": "S-133",
+          "branch_name": "Cruce de Sardina",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 MOO reg",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "raymond-a-moody"
+    }
+  ]
+}

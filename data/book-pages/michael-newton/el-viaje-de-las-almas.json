@@ -50,7 +50,8 @@
     "iberlibro": "https://www.iberlibro.com/servlet/SearchResults?an=michael%20newton&tn=El%20viaje%20de%20las%20almas",
     "osdad": "https://osdad.org/listado-de-libros-de-segunda-mano/"
   },
-  "availability_enabled": false,
+  "availability_enabled": true,
+  "availability_source": "/data/availability/michael-newton.json",
   "data_source": "/data/library/michael-newton.json",
   "work_slug": "el-viaje-de-las-almas",
   "related_author_books": [

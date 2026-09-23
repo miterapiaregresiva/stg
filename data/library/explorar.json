@@ -3,6 +3,14 @@
   "generated_at": "2026-09-21",
   "kind": "exploracion-biblioteca",
   "notice": "Índice de exploración de la biblioteca. Todas las obras disponen de ficha dentro del explorador; los datos editoriales, de portada, lectura online y disponibilidad se amplían solo cuando han sido verificados.",
+  "availability_sources": {
+    "brian-weiss": "/data/availability/brian-weiss.json",
+    "michael-newton": "/data/availability/michael-newton.json",
+    "edith-fiore": "/data/availability/edith-fiore.json",
+    "helen-wambach": "/data/availability/helen-wambach.json",
+    "ian-stevenson": "/data/availability/ian-stevenson.json",
+    "raymond-a-moody": "/data/availability/raymond-a-moody.json"
+  },
   "topics": [
     {"slug": "vida-entre-vidas", "name": "Vida entre vidas"},
     {"slug": "regresion", "name": "Regresión y recuerdos"},
@@ -99,7 +107,7 @@
       "page": "autores/edith-fiore/",
       "placeholder_icon": "female",
       "works": [
-        {"slug": "you-have-been-here-before", "title": "You Have Been Here Before", "topics": ["regresion", "casos"], "cover": {"src": "/assets/images/webp/ebay-edith-fiore-you-have-been-here-before-portada.webp", "alt": "Portada de You Have Been Here Before, de Edith Fiore", "credit_source": "eBay", "credit_url": "https://i.ebayimg.com/images/g/WvoAAOSwx0NmxCLa/s-l1600.webp"}, "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/youhavebeenhereb00fior"}]},
+        {"slug": "you-have-been-here-before", "title": "You Have Been Here Before", "topics": ["regresion", "casos"], "isbns": ["8471665972"], "cover": {"src": "/assets/images/webp/ebay-edith-fiore-you-have-been-here-before-portada.webp", "alt": "Portada de You Have Been Here Before, de Edith Fiore", "credit_source": "eBay", "credit_url": "https://i.ebayimg.com/images/g/WvoAAOSwx0NmxCLa/s-l1600.webp"}, "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/youhavebeenhereb00fior"}]},
         {"slug": "the-unquiet-dead", "title": "The Unquiet Dead", "topics": ["casos"], "cover": {"src": "/assets/images/webp/penguin-random-house-edith-fiore-the-unquiet-dead-portada.webp", "alt": "Portada de The Unquiet Dead, de Edith Fiore", "credit_source": "Penguin Random House", "credit_url": "https://insight.penguinrandomhouse.com/fullpage.do?pContentType=JPG&pName=fullpage&pISBN=9780345460875&pPageID=1"}}
       ]
     },
@@ -158,6 +166,7 @@
           "slug": "vida-antes-de-la-vida",
           "title": "Vida antes de la vida",
           "original_title": "Life Before Life",
+          "isbns": ["8471666391"],
           "topics": ["vida-entre-vidas", "casos"],
           "cover": {
             "src": "/assets/images/webp/internet-archive-helen-wambach-vida-antes-de-la-vida-portada-579x834.webp",
@@ -192,6 +201,7 @@
         {
           "slug": "twenty-cases-suggestive-of-reincarnation",
           "title": "Twenty Cases Suggestive of Reincarnation",
+          "isbns": ["8487476333"],
           "topics": ["regresion", "casos"],
           "cover": {
             "src": "/assets/images/webp/internet-archive-ian-stevenson-twenty-cases-suggestive-of-reincarnation-portada-438x670.webp",
@@ -288,20 +298,21 @@
           "slug": "vida-despues-de-la-vida",
           "title": "Vida después de la vida",
           "original_title": "Life After Life",
+          "isbns": ["9788441437845", "8422655764", "9788441411579", "8471665387", "9788441402119"],
           "topics": ["vida-entre-vidas", "casos"],
           "cover": {
-            "src": "/assets/images/webp/internet-archive-raymond-moody-life-after-life-edicion-francesa-portada-395x672.webp",
-            "alt": "Portada de una edición francesa de Vida después de la vida, de Raymond A. Moody",
-            "credit_source": "Internet Archive",
-            "credit_url": "https://archive.org/details/lavieapreslaviee0000mood"
+            "src": "/assets/images/webp/edaf-raymond-moody-vida-despues-de-la-vida-portada.jpg",
+            "alt": "Portada en español de Vida después de la vida, de Raymond A. Moody",
+            "credit_source": "Editorial EDAF",
+            "credit_url": "https://www.edaf.net/libro/vida-despues-de-la-vida_87923/"
           },
           "archive": [
             {"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/lifeafterlifeinv00mood"},
             {"title": "Edición en francés", "type": "borrow", "url": "https://archive.org/details/lavieapreslaviee0000mood"}
           ]
         },
-        {"slug": "reflections-on-life-after-life", "title": "Reflections on Life After Life", "topics": ["vida-entre-vidas", "casos"], "cover": {"src": "/assets/images/webp/amazon-raymond-moody-reflections-on-life-after-life-portada.webp", "alt": "Portada de Reflections on Life After Life, de Raymond A. Moody", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/81BkayYt4mL._SL1500_.jpg"}, "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/reflectionsonlif00mood_1"}]},
-        {"slug": "coming-back", "title": "Coming Back", "topics": ["regresion", "casos"], "cover": {"src": "/assets/images/webp/amazon-raymond-moody-coming-back-portada.webp", "alt": "Portada de Coming Back, de Raymond A. Moody", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/61ArcMIDofL._SL1360_.jpg"}}
+        {"slug": "reflections-on-life-after-life", "title": "Reflections on Life After Life", "topics": ["vida-entre-vidas", "casos"], "isbns": ["9684450036", "8471665840", "8471664091"], "cover": {"src": "/assets/images/webp/amazon-raymond-moody-reflections-on-life-after-life-portada.webp", "alt": "Portada de Reflections on Life After Life, de Raymond A. Moody", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/81BkayYt4mL._SL1500_.jpg"}, "archive": [{"title": "Edición en inglés", "type": "borrow", "url": "https://archive.org/details/reflectionsonlif00mood_1"}]},
+        {"slug": "coming-back", "title": "Coming Back", "topics": ["regresion", "casos"], "isbns": ["8476404409", "8441411654"], "cover": {"src": "/assets/images/webp/amazon-raymond-moody-coming-back-portada.webp", "alt": "Portada de Coming Back, de Raymond A. Moody", "credit_source": "Amazon", "credit_url": "https://m.media-amazon.com/images/I/61ArcMIDofL._SL1360_.jpg"}}
       ]
     }
   ]

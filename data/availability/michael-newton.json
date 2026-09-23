@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "source": "RED BICA / OpacDiscovery",
+  "source_mode": "public GET only",
+  "author_slug": "michael-newton",
+  "last_checked": "2026-09-23T19:04:06Z",
+  "refresh_target": "daily",
+  "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
+  "records_checked": 2,
+  "works": {
+    "el-viaje-de-las-almas": {
+      "copies": 4,
+      "available": 2,
+      "islands": {
+        "GC": {
+          "name": "Gran Canaria",
+          "copies": 3,
+          "available": 1,
+          "libraries": {
+            "GC00": {
+              "name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
+              "copies": 1,
+              "available": 0,
+              "branches": {
+                "100": {
+                  "name": "Biblioteca Pública del Estado en Las Palmas",
+                  "location_code": "S-100",
+                  "copies": 1,
+                  "available": 0,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            },
+            "GC12": {
+              "name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
+              "copies": 1,
+              "available": 0,
+              "branches": {
+                "132": {
+                  "name": "Biblioteca Central de Santa Lucía",
+                  "location_code": "S-132",
+                  "copies": 1,
+                  "available": 0,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            },
+            "GC16": {
+              "name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "137": {
+                  "name": "Maspalomas",
+                  "location_code": "S-137",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "LP": {
+          "name": "La Palma",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "LP02": {
+              "name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "502": {
+                  "name": "Los Llanos de Aridane",
+                  "location_code": "S-502",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "bica_records": 1,
+      "isbn_count": 1
+    },
+    "el-destino-de-las-almas": {
+      "copies": 1,
+      "available": 1,
+      "islands": {
+        "TF": {
+          "name": "Tenerife",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "TF32": {
+              "name": "Vilaflor. Biblioteca Pública Municipal de Vilaflor de Chasna",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "259": {
+                  "name": "Vilaflor",
+                  "location_code": "S-259",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "bica_records": 1,
+      "isbn_count": 1
+    }
+  },
+  "records": [
+    {
+      "bica_id": "1233090",
+      "work_slug": "el-viaje-de-las-almas",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTIzMzA5MA",
+      "copies_total": 4,
+      "copies_available": 2,
+      "copies": [
+        {
+          "copy_id": "972608695",
+          "title_id": "1233090",
+          "library_id": "GC00",
+          "library_name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
+          "branch_id": "100",
+          "location_code": "S-100",
+          "branch_name": "Biblioteca Pública del Estado en Las Palmas",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible después de: 13/10/2026",
+          "available": false,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "2 NEW via",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "973114132",
+          "title_id": "1233090",
+          "library_id": "GC12",
+          "library_name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
+          "branch_id": "132",
+          "location_code": "S-132",
+          "branch_name": "Biblioteca Central de Santa Lucía",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible después de: 16/10/2026",
+          "available": false,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "2-187 NEW via",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "973000989",
+          "title_id": "1233090",
+          "library_id": "GC16",
+          "library_name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
+          "branch_id": "137",
+          "location_code": "S-137",
+          "branch_name": "Maspalomas",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "2 NEW via",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "972933323",
+          "title_id": "1233090",
+          "library_id": "LP02",
+          "library_name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
+          "branch_id": "502",
+          "location_code": "S-502",
+          "branch_name": "Los Llanos de Aridane",
+          "island_code": "LP",
+          "island": "La Palma",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "2 NEW via",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "michael-newton"
+    },
+    {
+      "bica_id": "1412637",
+      "work_slug": "el-destino-de-las-almas",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTQxMjYzNw",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "973206129",
+          "title_id": "1412637",
+          "library_id": "TF32",
+          "library_name": "Vilaflor. Biblioteca Pública Municipal de Vilaflor de Chasna",
+          "branch_id": "259",
+          "location_code": "S-259",
+          "branch_name": "Vilaflor",
+          "island_code": "TF",
+          "island": "Tenerife",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 NEW des",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "michael-newton"
+    }
+  ]
+}

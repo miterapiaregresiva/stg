@@ -42,7 +42,7 @@
   let indexData = null;     // data/library/explorar.json
   let libraryData = {};     // slug -> data/library/<slug>.json
   let bookPages = {};       // 'aSlug/wSlug' -> data/book-pages/...
-  let availabilityData = null; // data/availability/brian-weiss.json
+  let availabilityData = {};  // author slug -> data/availability/<author>.json
   let directory = {};       // 'lib:branch' -> ficha del directorio
   let authors = [];
   let topics = [];
@@ -277,9 +277,15 @@
     };
   }
 
-  function buildBranchRecordMap(workSlug) {
+  function availabilityFor(authorSlug, workSlug) {
+    const source = availabilityData[authorSlug];
+    return source && source.works ? source.works[workSlug] : null;
+  }
+
+  function buildBranchRecordMap(authorSlug, workSlug) {
     const map = new Map();
-    (availabilityData && availabilityData.records || [])
+    const source = availabilityData[authorSlug];
+    (source && source.records || [])
       .filter(record => record.work_slug === workSlug)
       .forEach(record => {
         const seen = new Set();
@@ -328,14 +334,15 @@
     </article>`;
   }
 
-  function renderAvailabilityInto(workSlug, target) {
-    const work = availabilityData && availabilityData.works ? availabilityData.works[workSlug] : null;
+  function renderAvailabilityInto(catalogWork, target) {
+    if (!target) return;
+    const work = availabilityFor(catalogWork.author.slug, catalogWork.slug);
     if (!work || !Object.keys(work.islands || {}).length) {
       target.innerHTML = '<p>No hay desglose geográfico disponible para esta obra.</p>';
       return;
     }
 
-    const branchRecordMap = buildBranchRecordMap(workSlug);
+    const branchRecordMap = buildBranchRecordMap(catalogWork.author.slug, catalogWork.slug);
     const geography = Object.entries(work.islands || {})
       .filter(([code, island]) => code !== 'UNKNOWN' && Number(island && island.copies || 0) > 0)
       .sort(([a], [b]) => ISLAND_ORDER.indexOf(a) - ISLAND_ORDER.indexOf(b))
@@ -470,7 +477,10 @@
       }
     }));
 
-    try { availabilityData = await loadJSON('/data/availability/brian-weiss.json'); } catch (e) { availabilityData = null; }
+    const availabilitySources = Object.entries(indexData.availability_sources || {});
+    await Promise.all(availabilitySources.map(async ([authorSlug, source]) => {
+      try { availabilityData[authorSlug] = await loadJSON(source); } catch (e) { availabilityData[authorSlug] = null; }
+    }));
     try {
       directory = (await loadJSON('/data/libraries/canarias.json')).libraries || {};
     } catch (e) { directory = {}; }
@@ -489,7 +499,8 @@
         const key = `${a.slug}/${w.slug}`;
         const page = bookPages[key] || null;
         const lib = (libraryData[a.slug] && (libraryData[a.slug].works || []).find(x => x.slug === w.slug)) || null;
-        const bicaWork = availabilityData && availabilityData.works ? availabilityData.works[w.slug] : null;
+        const bicaSource = availabilityData[a.slug];
+        const bicaWork = availabilityFor(a.slug, w.slug);
         const summary = bicaWork || lib;
         const cover = page && page.cover ? page.cover : (w.cover || null);
         let title = (page && page.title) || (lib && lib.title) || w.title || slugTitle(w.slug);
@@ -506,8 +517,8 @@
           languages,
           lead: (page && page.lead) || w.lead || '',
           about: (page && page.about) || [],
-          primary_isbn: (page && page.primary_isbn) || '',
-          isbns: (page && page.isbns) || [],
+          primary_isbn: (page && page.primary_isbn) || w.primary_isbn || '',
+          isbns: (page && page.isbns) || w.isbns || [],
           cover: cover
             ? {src: cover.src, alt: cover.alt || `Portada de ${title}`, credit_source: cover.credit_source, credit_url: cover.credit_url}
             : null,
@@ -521,7 +532,7 @@
               }
             : null,
           islands: (bicaWork && bicaWork.islands) || {},
-          last_checked: (lib && lib.last_checked) || (libraryData[a.slug] && libraryData[a.slug].last_checked) || (availabilityData && availabilityData.last_checked) || null,
+          last_checked: (lib && lib.last_checked) || (libraryData[a.slug] && libraryData[a.slug].last_checked) || (bicaSource && bicaSource.last_checked) || null,
           hasDaily: Boolean(bicaWork),
           hasDetailPage: Boolean(page || lib),
           isCatalogued: true,
@@ -930,7 +941,7 @@
     if (zoom) zoom.addEventListener('click', () => openZoom(work));
 
     if (work.hasDaily) {
-      renderAvailabilityInto(work.slug, bookViewEl.querySelector('[data-island-status]'));
+      renderAvailabilityInto(work, bookViewEl.querySelector('[data-island-status]'));
     }
 
     bookViewEl.querySelectorAll('[data-book-topic]').forEach(button => {

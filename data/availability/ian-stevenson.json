@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "source": "RED BICA / OpacDiscovery",
+  "source_mode": "public GET only",
+  "author_slug": "ian-stevenson",
+  "last_checked": "2026-09-23T19:04:06Z",
+  "refresh_target": "daily",
+  "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
+  "records_checked": 1,
+  "works": {
+    "twenty-cases-suggestive-of-reincarnation": {
+      "copies": 1,
+      "available": 1,
+      "islands": {
+        "GC": {
+          "name": "Gran Canaria",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "GC11": {
+              "name": "Arucas",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "130": {
+                  "name": "Arucas",
+                  "location_code": "S-130",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "bica_records": 1,
+      "isbn_count": 1
+    }
+  },
+  "records": [
+    {
+      "bica_id": "315417",
+      "work_slug": "twenty-cases-suggestive-of-reincarnation",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMzE1NDE3",
+      "copies_total": 1,
+      "copies_available": 1,
+      "copies": [
+        {
+          "copy_id": "571058651",
+          "title_id": "315417",
+          "library_id": "GC11",
+          "library_name": "Arucas",
+          "branch_id": "130",
+          "location_code": "S-130",
+          "branch_name": "Arucas",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 STE vei",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "ian-stevenson"
+    }
+  ]
+}

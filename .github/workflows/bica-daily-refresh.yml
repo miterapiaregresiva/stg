@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'scripts/refresh_bica_availability.py'
-      - 'data/bica/brian-weiss-records.json'
+      - 'data/bica/*-records.json'
       - 'data/bica/library-contacts.json'
       - '.github/workflows/bica-daily-refresh.yml'
   schedule:
@@ -41,14 +41,14 @@ jobs:
       - name: Commit changed availability data
         shell: bash
         run: |
-          if git diff --quiet -- data/availability/brian-weiss.json data/library/brian-weiss.json data/books/lazos-de-amor.json; then
+          if git diff --quiet -- data/availability data/library data/books/lazos-de-amor.json; then
             echo "No availability changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/availability/brian-weiss.json data/library/brian-weiss.json data/books/lazos-de-amor.json
+          git add data/availability data/library data/books/lazos-de-amor.json
           git commit -m "Update RED BICA daily availability"
           git pull --rebase origin main
           git push origin HEAD:main

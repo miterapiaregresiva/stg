@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "source": "RED BICA / OpacDiscovery",
+  "source_mode": "public GET only",
+  "author_slug": "edith-fiore",
+  "last_checked": "2026-09-23T19:04:06Z",
+  "refresh_target": "daily",
+  "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
+  "records_checked": 1,
+  "works": {
+    "you-have-been-here-before": {
+      "copies": 2,
+      "available": 2,
+      "islands": {
+        "GC": {
+          "name": "Gran Canaria",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "GC16": {
+              "name": "San Bartolomé de Tirajana. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "137": {
+                  "name": "Maspalomas",
+                  "location_code": "S-137",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TF": {
+          "name": "Tenerife",
+          "copies": 1,
+          "available": 1,
+          "libraries": {
+            "TF13": {
+              "name": "San Bartolomé de Tirajana. Red de Bibliotecas Públicas Municipales",
+              "copies": 1,
+              "available": 1,
+              "branches": {
+                "224": {
+                  "name": "Los Realejos",
+                  "location_code": "S-224",
+                  "copies": 1,
+                  "available": 1,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "bica_records": 1,
+      "isbn_count": 1
+    }
+  },
+  "records": [
+    {
+      "bica_id": "314656",
+      "work_slug": "you-have-been-here-before",
+      "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMzE0NjU2",
+      "copies_total": 2,
+      "copies_available": 2,
+      "copies": [
+        {
+          "copy_id": "601016183",
+          "title_id": "314656",
+          "library_id": "GC16",
+          "library_name": "San Bartolomé de Tirajana. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "137",
+          "location_code": "S-137",
+          "branch_name": "Maspalomas",
+          "island_code": "GC",
+          "island": "Gran Canaria",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 FIO ust.",
+          "type": "Prestable",
+          "media": null,
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "971211616",
+          "title_id": "314656",
+          "library_id": "TF13",
+          "library_name": "San Bartolomé de Tirajana. Red de Bibliotecas Públicas Municipales",
+          "branch_id": "224",
+          "location_code": "S-224",
+          "branch_name": "Los Realejos",
+          "island_code": "TF",
+          "island": "Tenerife",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 FIO ust",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        }
+      ],
+      "author_slug": "edith-fiore"
+    }
+  ]
+}

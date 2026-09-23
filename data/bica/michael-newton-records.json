@@ -1,0 +1,15 @@
+{
+  "author": "Michael Newton",
+  "author_slug": "michael-newton",
+  "source": "RED BICA",
+  "works": {
+    "el-viaje-de-las-almas": {
+      "bica_ids": ["1233090"],
+      "isbns": ["9788415292333"]
+    },
+    "el-destino-de-las-almas": {
+      "bica_ids": ["1412637"],
+      "isbns": ["9788496111561"]
+    }
+  }
+}
