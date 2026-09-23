@@ -33,9 +33,7 @@ body:has(.library-audience-dialog[open]){overflow:hidden}
 .library-site-header{border-top:4px solid var(--accent);border-bottom-color:rgba(107,63,120,.28);background:rgba(255,253,255,.97)}
 .library-site-header .library-menu{gap:.2rem}
 .library-site-header .library-menu a{font-size:.88rem}
-.library-site-header .library-menu .library-return-link{margin-right:.3rem;border:1px solid rgba(107,63,120,.28);border-radius:6px;color:var(--accent-strong);font-weight:750}
-.library-site-header .library-menu .library-return-link:hover{border-color:var(--accent)}
-@media(max-width:900px){.library-site-header .mobile-nav-enhanced.mobile-menu-open .library-return-link{margin:0 0 .3rem;border-radius:6px}}
+.library-site-header .library-brand-back{display:block;margin-bottom:.08rem;color:var(--accent-strong);font-size:.66rem;font-weight:750;line-height:1;letter-spacing:0;text-transform:none}
 
 /* ---- Barra de controles ---- */
 .library-explorer-bar{display:flex;flex-wrap:wrap;gap:.85rem;align-items:flex-end;justify-content:space-between;min-width:0;padding:1rem;border:1px solid rgba(55,35,61,.12);border-radius:var(--radius);background:var(--surface)}
