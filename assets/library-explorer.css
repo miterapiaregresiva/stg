@@ -10,6 +10,33 @@
 .library-book-active .author-directory>.hero,.library-book-active .author-directory>.note{display:none}
 .library-book-active .author-directory>.section:not(.library-explorer){display:none}
 
+/* ---- Ubicación sin cookies ---- */
+.library-audience-status{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.65rem;padding:.75rem 0;border-bottom:1px solid rgba(55,35,61,.12);color:var(--muted);font-size:.86rem}
+.library-audience-status button{padding:.35rem 0;border:0;background:transparent;color:var(--accent-strong);font:inherit;font-weight:750;text-decoration:underline;text-underline-offset:.18em;cursor:pointer}
+.library-audience-dialog{width:min(92vw,560px);padding:0;border:1px solid rgba(55,35,61,.18);border-radius:8px;background:#fff;color:var(--text);box-shadow:0 24px 70px rgba(30,20,34,.3)}
+.library-audience-dialog [hidden]{display:none!important}
+.library-audience-dialog::backdrop{background:rgba(30,20,34,.68);backdrop-filter:blur(3px)}
+.library-audience-card{display:grid;gap:1rem;padding:clamp(1.25rem,4vw,2rem)}
+.library-audience-card h2{margin:0;font-size:1.8rem;line-height:1.2}
+.library-audience-card p{margin:0;line-height:1.55}
+.library-audience-actions{display:flex;flex-wrap:wrap;gap:.7rem}
+.library-audience-actions button{min-width:7rem;min-height:44px;padding:.6rem 1rem;border:1px solid rgba(107,63,120,.32);border-radius:6px;background:#fff;color:var(--accent-strong);font:inherit;font-weight:750;cursor:pointer}
+.library-audience-actions button.is-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.library-audience-island{display:grid;gap:1rem}
+.library-audience-island label{display:grid;gap:.4rem;font-weight:750}
+.library-audience-island select{min-height:46px;width:100%;padding:.55rem .75rem;border:1px solid rgba(55,35,61,.2);border-radius:6px;background:#fff;color:var(--text);font:inherit}
+.library-audience-privacy{color:var(--muted);font-size:.78rem}
+body:has(.library-audience-dialog[open]){overflow:hidden}
+@media(max-width:520px){.library-audience-card h2{font-size:1.55rem}.library-audience-actions button{flex:1 1 7rem}}
+
+/* ---- Cabecera propia de la biblioteca ---- */
+.library-site-header{border-top:4px solid var(--accent);border-bottom-color:rgba(107,63,120,.28);background:rgba(255,253,255,.97)}
+.library-site-header .library-menu{gap:.2rem}
+.library-site-header .library-menu a{font-size:.88rem}
+.library-site-header .library-menu .library-return-link{margin-right:.3rem;border:1px solid rgba(107,63,120,.28);border-radius:6px;color:var(--accent-strong);font-weight:750}
+.library-site-header .library-menu .library-return-link:hover{border-color:var(--accent)}
+@media(max-width:900px){.library-site-header .mobile-nav-enhanced.mobile-menu-open .library-return-link{margin:0 0 .3rem;border-radius:6px}}
+
 /* ---- Barra de controles ---- */
 .library-explorer-bar{display:flex;flex-wrap:wrap;gap:.85rem;align-items:flex-end;justify-content:space-between;min-width:0;padding:1rem;border:1px solid rgba(55,35,61,.12);border-radius:var(--radius);background:var(--surface)}
 .library-explorer-views{display:flex;flex:1 1 260px;flex-wrap:wrap;gap:.4rem;min-width:0;max-width:100%}
@@ -163,6 +190,7 @@
 .book-open-section{display:grid;gap:0}
 .book-open-section h2{font-size:1.45rem;margin:0 0 .6rem;line-height:1.3}
 .book-open-section>p{max-width:var(--measure)}
+.book-open .library-location-controls{grid-template-columns:minmax(0,420px)}
 .book-open-others-label{color:var(--muted);font-size:.84rem;font-weight:650}
 @media(max-width:760px){.book-open-hero{grid-template-columns:1fr}.book-open-cover-col{grid-row:1;justify-items:center}.book-open-cover-col .book-cover-feature{max-width:74vw}.book-open-copy{grid-row:2}.book-open-copy h1{font-size:2rem}}
 

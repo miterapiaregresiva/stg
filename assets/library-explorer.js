@@ -9,13 +9,33 @@
   const viewButtons = Array.from(root.querySelectorAll('[data-library-view]'));
   const densityButtons = Array.from(root.querySelectorAll('[data-density]'));
   const searchInput = root.querySelector('[data-library-search]');
+  const headerViewLinks = Array.from(document.querySelectorAll('[data-library-nav-view]'));
+  const headerHomeLink = document.querySelector('[data-library-nav-home]');
 
   const DENSITY_KEY = 'mtr-library-density';
+  const ISLAND_NAMES = {
+    TF: 'Tenerife', GC: 'Gran Canaria', LZ: 'Lanzarote', FV: 'Fuerteventura',
+    LP: 'La Palma', LG: 'La Gomera', EH: 'El Hierro', GR: 'La Graciosa'
+  };
+
+  function readAudience() {
+    const params = new URLSearchParams(location.search);
+    const canarias = params.get('canarias');
+    const island = String(params.get('isla') || '').toUpperCase();
+    return {
+      canarias: canarias === 'si' || canarias === 'no' ? canarias : '',
+      island: Object.prototype.hasOwnProperty.call(ISLAND_NAMES, island) ? island : ''
+    };
+  }
 
   const state = {
-    view: 'autores', // autores | temas | lista
+    view: (() => {
+      const requested = new URLSearchParams(location.search).get('vista');
+      return ['autores', 'temas', 'lista'].includes(requested) ? requested : 'autores';
+    })(), // autores | temas | lista
     density: (() => { try { return localStorage.getItem(DENSITY_KEY) || 'standard'; } catch (e) { return 'standard'; } })(),
-    query: ''
+    query: '',
+    audience: readAudience()
   };
 
   // ---- Datos ----
@@ -42,6 +62,120 @@
 
   function closeImageCredits() {
     document.querySelectorAll('.image-credit[open]').forEach(details => { details.open = false; });
+  }
+
+  function showsBica() {
+    return state.audience.canarias === 'si' && Boolean(state.audience.island);
+  }
+
+  function libraryUrl(includeHash) {
+    return `${location.pathname}${location.search}${includeHash ? location.hash : ''}`;
+  }
+
+  function urlForView(view) {
+    const url = new URL(libraryUrl(false), location.origin);
+    if (view) url.searchParams.set('vista', view);
+    else url.searchParams.delete('vista');
+    return `${url.pathname}${url.search}`;
+  }
+
+  function writeAudience(canarias, island) {
+    const url = new URL(location.href);
+    url.searchParams.set('canarias', canarias);
+    if (canarias === 'si' && island) url.searchParams.set('isla', island);
+    else url.searchParams.delete('isla');
+    history.replaceState(history.state, '', `${url.pathname}${url.search}${url.hash}`);
+    state.audience = readAudience();
+    renderAudienceStatus();
+    if (authors.length) {
+      if (!openBookFromHash()) renderShelves();
+    }
+  }
+
+  function openAudienceDialog() {
+    let dialog = document.querySelector('[data-library-audience-dialog]');
+    if (!dialog) {
+      dialog = document.createElement('dialog');
+      dialog.className = 'library-audience-dialog';
+      dialog.dataset.libraryAudienceDialog = '';
+      dialog.setAttribute('aria-labelledby', 'library-audience-title');
+      dialog.innerHTML = `
+        <form method="dialog" class="library-audience-card" data-audience-form>
+          <div class="eyebrow">Personaliza la biblioteca</div>
+          <h2 id="library-audience-title">¿Nos visitas desde Canarias?</h2>
+          <p>Así podemos mostrarte los ejemplares disponibles cerca de ti en RED BICA.</p>
+          <div class="library-audience-actions" data-audience-first-step>
+            <button type="button" class="is-primary" data-audience-yes>Sí</button>
+            <button type="button" data-audience-no>No</button>
+          </div>
+          <div class="library-audience-island" data-audience-island-step hidden>
+            <label for="library-audience-island"><span>¿De qué isla?</span>
+              <select id="library-audience-island" data-audience-island required>
+                <option value="">Selecciona una isla</option>
+                ${Object.entries(ISLAND_NAMES).map(([code, name]) => `<option value="${code}">${esc(name)}</option>`).join('')}
+              </select>
+            </label>
+            <div class="library-audience-actions">
+              <button type="submit" class="is-primary">Continuar</button>
+              <button type="button" data-audience-back>Volver</button>
+            </div>
+          </div>
+          <p class="library-audience-privacy">La elección se guarda únicamente en esta dirección web. No usamos cookies para recordarla.</p>
+        </form>`;
+      document.body.appendChild(dialog);
+      dialog.addEventListener('cancel', event => event.preventDefault());
+
+      const firstStep = dialog.querySelector('[data-audience-first-step]');
+      const islandStep = dialog.querySelector('[data-audience-island-step]');
+      const islandSelect = dialog.querySelector('[data-audience-island]');
+      dialog.querySelector('[data-audience-yes]').addEventListener('click', () => {
+        firstStep.hidden = true;
+        islandStep.hidden = false;
+        islandSelect.focus();
+      });
+      dialog.querySelector('[data-audience-no]').addEventListener('click', () => {
+        writeAudience('no', '');
+        dialog.close();
+      });
+      dialog.querySelector('[data-audience-back]').addEventListener('click', () => {
+        islandStep.hidden = true;
+        firstStep.hidden = false;
+        dialog.querySelector('[data-audience-yes]').focus();
+      });
+      dialog.querySelector('[data-audience-form]').addEventListener('submit', event => {
+        event.preventDefault();
+        if (!islandSelect.value) {
+          islandSelect.focus();
+          return;
+        }
+        writeAudience('si', islandSelect.value);
+        dialog.close();
+      });
+    }
+
+    const firstStep = dialog.querySelector('[data-audience-first-step]');
+    const islandStep = dialog.querySelector('[data-audience-island-step]');
+    const islandSelect = dialog.querySelector('[data-audience-island]');
+    firstStep.hidden = false;
+    islandStep.hidden = true;
+    islandSelect.value = state.audience.island || '';
+    if (!dialog.open) dialog.showModal();
+    setTimeout(() => dialog.querySelector('[data-audience-yes]').focus(), 0);
+  }
+
+  function renderAudienceStatus() {
+    let bar = root.querySelector('[data-library-audience-status]');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.className = 'library-audience-status';
+      bar.dataset.libraryAudienceStatus = '';
+      root.insertBefore(bar, root.firstChild);
+    }
+    const message = showsBica()
+      ? `Mostrando lectura online, compra y ejemplares en ${ISLAND_NAMES[state.audience.island]}.`
+      : 'Mostrando lectura online y opciones de compra. RED BICA está oculto.';
+    bar.innerHTML = `<span>${esc(message)}</span><button type="button" data-audience-change>Cambiar ubicación</button>`;
+    bar.querySelector('[data-audience-change]').addEventListener('click', openAudienceDialog);
   }
 
   function formatChecked(value) {
@@ -238,26 +372,25 @@
       return;
     }
 
+    const preferredIsland = geography.find(item => item.code === state.audience.island);
+    if (!preferredIsland) {
+      target.innerHTML = `<p class="book-notice">No se han localizado ejemplares de esta obra en ${esc(ISLAND_NAMES[state.audience.island] || state.audience.island)}.</p>`;
+      return;
+    }
+
     target.innerHTML = `
       <div class="library-location-picker">
         <div class="library-location-controls">
-          <label><span>Isla</span>
-            <select data-library-island>
-              <option value="">Selecciona una isla</option>
-              ${geography.map(island => `<option value="${esc(island.code)}">${esc(island.name)}</option>`).join('')}
-            </select>
-          </label>
-          <label><span>Municipio</span>
-            <select data-library-municipality disabled>
-              <option value="">Selecciona primero una isla</option>
+          <label><span>Municipio en ${esc(preferredIsland.name)}</span>
+            <select data-library-municipality>
+              <option value="">Selecciona un municipio</option>
             </select>
           </label>
         </div>
-        <p class="library-location-hint" data-library-location-hint>Solo aparecen islas y municipios donde RED BICA registra ejemplares de este libro.</p>
+        <p class="library-location-hint" data-library-location-hint></p>
         <div class="library-location-results" data-library-location-results aria-live="polite"></div>
       </div>`;
 
-    const islandSelect = target.querySelector('[data-library-island]');
     const municipalitySelect = target.querySelector('[data-library-municipality]');
     const hint = target.querySelector('[data-library-location-hint]');
     const results = target.querySelector('[data-library-location-results]');
@@ -288,23 +421,12 @@
       }
     };
 
-    islandSelect.addEventListener('change', () => {
-      const island = geography.find(item => item.code === islandSelect.value);
-      if (!island) {
-        municipalitySelect.innerHTML = '<option value="">Selecciona primero una isla</option>';
-        municipalitySelect.disabled = true;
-        results.innerHTML = '';
-        hint.textContent = 'Solo aparecen islas y municipios donde RED BICA registra ejemplares de este libro.';
-        return;
-      }
-      populateMunicipalities(island);
+    municipalitySelect.addEventListener('change', () => {
+      if (!municipalitySelect.value) { results.innerHTML = ''; return; }
+      showMunicipality(preferredIsland, municipalitySelect.value);
     });
 
-    municipalitySelect.addEventListener('change', () => {
-      const island = geography.find(item => item.code === islandSelect.value);
-      if (!island || !municipalitySelect.value) { results.innerHTML = ''; return; }
-      showMunicipality(island, municipalitySelect.value);
-    });
+    populateMunicipalities(preferredIsland);
   }
 
   // ---- Carga de datos ----
@@ -398,6 +520,7 @@
                 isbn_count: summary.isbn_count
               }
             : null,
+          islands: (bicaWork && bicaWork.islands) || {},
           last_checked: (lib && lib.last_checked) || (libraryData[a.slug] && libraryData[a.slug].last_checked) || (availabilityData && availabilityData.last_checked) || null,
           hasDaily: Boolean(bicaWork),
           hasDetailPage: Boolean(page || lib),
@@ -447,6 +570,21 @@
       b.classList.toggle('is-active', active);
       b.setAttribute('aria-pressed', String(active));
     });
+    headerViewLinks.forEach(link => {
+      const active = link.dataset.libraryNavView === state.view && bookViewEl.hidden;
+      link.href = urlForView(link.dataset.libraryNavView);
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+    if (headerHomeLink) headerHomeLink.href = urlForView('');
+  }
+
+  function selectLibraryView(view, updateUrl) {
+    state.view = ['autores', 'temas', 'lista'].includes(view) ? view : 'autores';
+    if (updateUrl) history.replaceState(null, '', urlForView(state.view));
+    renderControlState();
+    renderShelves();
+    smoothScroll(root);
   }
 
   // ---- Estantes ----
@@ -497,7 +635,9 @@
 
     const badges = [];
     if (w.archive.length) badges.push('<span class="book-cover-badge badge-online" title="Lectura online"><img src="/assets/icons/lucide-monitor.svg" alt="">Online</span>');
-    if (w.hasPhysical) badges.push('<span class="book-cover-badge badge-physical" title="Ejemplares físicos en bibliotecas"><img src="/assets/icons/lucide-book-open.svg" alt="">Físico</span>');
+    const islandAvailability = showsBica() && w.islands ? w.islands[state.audience.island] : null;
+    const showPhysical = Boolean(islandAvailability && Number(islandAvailability.available || 0) > 0);
+    if (showPhysical) badges.push('<span class="book-cover-badge badge-physical" title="Ejemplares físicos en tu isla"><img src="/assets/icons/lucide-book-open.svg" alt="">Físico</span>');
 
     el.innerHTML = `
       <div class="book-cover-wrap${w.cover ? ' image-with-credit' : ''}">
@@ -511,7 +651,7 @@
         ${w.original_title ? `<p class="book-card-original">${esc(w.original_title)}</p>` : ''}
         ${showAuthor ? `<p class="book-card-author">${esc(w.author.name)}</p>` : ''}
         <div class="book-card-meta">
-          ${w.hasPhysical ? availabilityMarkup(w.summary.available, w.summary.copies) : ''}
+          ${showPhysical ? availabilityMarkup(islandAvailability.available, islandAvailability.copies) : ''}
           ${w.archive.length ? '<span class="book-card-ia-label">Lectura online</span>' : ''}
           ${!w.hasDetailPage ? '<span class="book-card-author-link">Ficha inicial</span>' : ''}
         </div>
@@ -725,6 +865,7 @@
     root.classList.remove('is-book-open');
     shelvesEl.hidden = false;
     bookViewEl.hidden = true;
+    renderControlState();
     shelvesEl.innerHTML = '';
     statusEl.textContent = '';
     railRefreshers.length = 0;
@@ -758,8 +899,14 @@
   function openBook(key) {
     const work = findWork(key);
     if (!work) return;
-    history.pushState({libraryBook: key}, '', `#libro=${key}`);
+    history.pushState({libraryBook: key}, '', `${location.pathname}${location.search}#libro=${encodeURIComponent(key)}`);
     renderBook(work);
+  }
+
+  function closeBookToShelves() {
+    history.replaceState(null, '', libraryUrl(false));
+    renderShelves();
+    smoothScroll(root);
   }
 
   function renderBook(work) {
@@ -769,16 +916,14 @@
     bookViewEl.innerHTML = bookOpenHTML(work);
     bookViewEl.hidden = false;
     shelvesEl.hidden = true;
+    renderControlState();
 
     const back = bookViewEl.querySelector('[data-book-back]');
-    if (back) back.addEventListener('click', () => {
-      if (history.state && history.state.libraryBook) {
-        history.back();
-      } else {
-        history.replaceState(null, '', `${location.pathname}${location.search}`);
-        renderShelves();
-        smoothScroll(root);
-      }
+    if (back) back.addEventListener('click', closeBookToShelves);
+    const libraryHome = bookViewEl.querySelector('[data-library-home]');
+    if (libraryHome) libraryHome.addEventListener('click', event => {
+      event.preventDefault();
+      closeBookToShelves();
     });
 
     const zoom = bookViewEl.querySelector('[data-book-cover-zoom]');
@@ -833,6 +978,8 @@
       `<span class="book-open-topic">${esc(lang.toUpperCase())}</span>`
     ].join('');
     const summaries = w.summary;
+    const selectedIsland = showsBica() && w.islands ? w.islands[state.audience.island] : null;
+    const islandName = ISLAND_NAMES[state.audience.island] || state.audience.island;
     const updated = formatChecked(w.last_checked);
 
     const archiveItems = w.archive.length
@@ -840,7 +987,7 @@
           const label = item.title && /edici[oó]n/i.test(item.title) ? item.title : `Ejemplar ${i + 1}`;
           const itemLang = extractLang(item.title, lang);
           const t = iaTypeLabel(item.type);
-          return `<li><strong>${esc(label)} · ${esc(itemLang)}</strong><br><span class="catalog-sub">${esc(t.sub)}</span><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${esc(t.link)}</a></li>`;
+          return `<li>${w.cover ? `<img class="archive-copy-cover" src="${esc(w.cover.src)}" alt="" loading="lazy">` : ''}<strong>${esc(label)} · ${esc(itemLang)}</strong><br><span class="catalog-sub">${esc(t.sub)}</span><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${esc(t.link)}</a></li>`;
         }).join('')
       : '<li>No hemos verificado todavía un recurso gratuito de lectura online para esta obra.</li>';
 
@@ -851,7 +998,7 @@
 
     return `
       <div class="book-open-bar">
-        <a class="book-open-library-link" href="/biblioteca-de-terapia-regresiva/">Biblioteca</a>
+        <a class="book-open-library-link" href="${esc(libraryUrl(false))}" data-library-home>Biblioteca</a>
         <span class="book-open-path">Biblioteca · ${esc(w.author.name)} · ${esc(w.title)}</span>
       </div>
       <article class="book-open">
@@ -885,7 +1032,7 @@
               : `<p class="lead">Ficha inicial de <em>${esc(w.title)}</em>, una obra seleccionada en el estante de ${esc(w.author.name)}.</p>`}
             <div class="book-primary-actions">
               ${w.archive.length ? '<a href="#book-leer-online">Leer online</a>' : ''}
-              <a href="#book-bibliotecas">Solicitar en préstamo</a>
+              ${showsBica() ? '<a href="#book-bibliotecas">Solicitar en préstamo</a>' : ''}
             </div>
             <details class="book-edition-details">
               <summary>Datos de esta obra</summary>
@@ -913,18 +1060,16 @@
           <div class="book-story">${w.about.map(p => `<p>${esc(p)}</p>`).join('')}</div>
         </section>` : `<section class="book-open-section"><h2>Sobre esta obra</h2><p class="book-notice">La reseña editorial está pendiente de documentación. La ficha se mantiene disponible para conservar la navegación completa de la biblioteca.</p></section>`}
 
-        <section class="book-open-section">
+        ${showsBica() ? `<section class="book-open-section">
           <h2>Disponibilidad de ${esc(w.title)} en las bibliotecas de Canarias</h2>
-          ${summaries
+          ${selectedIsland
             ? `<div class="book-availability-summary">
-                <div><strong>${summaries.bica_records ?? '—'}</strong><span>registros en las bibliotecas de Canarias</span></div>
-                <div><strong>${summaries.copies ?? '—'}</strong><span>ejemplares localizados</span></div>
-                <div><strong>${summaries.available ?? '—'}</strong><span>disponibles</span></div>
-                <div><strong>${summaries.isbn_count ?? '—'}</strong><span>ISBN localizados</span></div>
+                <div><strong>${selectedIsland.copies ?? '—'}</strong><span>ejemplares en ${esc(islandName)}</span></div>
+                <div><strong>${selectedIsland.available ?? '—'}</strong><span>disponibles ahora</span></div>
               </div>
               <p class="book-notice">La disponibilidad se actualiza una vez al día. Última comprobación: <strong>${esc(updated)}</strong>.</p>`
-            : `<p class="book-notice">La disponibilidad de esta obra todavía no se ha verificado en RED BICA.</p>`}
-        </section>
+            : `<p class="book-notice">No se han localizado ejemplares de esta obra en ${esc(islandName)}${summaries ? ' en la última comprobación' : ''}.</p>`}
+        </section>` : ''}
 
         <section class="book-open-section" id="book-leer-online">
           <h2>Leer o consultar ${esc(w.title)} online</h2>
@@ -932,13 +1077,13 @@
           <ul class="book-resource-list archive-copy-grid">${archiveItems}</ul>
         </section>
 
-        <section class="book-open-section" id="book-bibliotecas">
+        ${showsBica() ? `<section class="book-open-section" id="book-bibliotecas">
           <h2>Préstamo de ${esc(w.title)} en Canarias</h2>
           <p>RED BICA aporta el catálogo y la disponibilidad. Los nombres públicos y la información de cada biblioteca se enriquecen con el Directorio de Bibliotecas de Canarias.</p>
           ${w.hasDaily
             ? `<div class="book-islands" data-island-status><p>Cargando disponibilidad…</p></div>`
             : `<p class="book-notice">${esc(w.availabilityNote || 'El desglose diario por biblioteca se incorporará en una próxima actualización.')}</p>`}
-        </section>
+        </section>` : ''}
 
         <section class="book-open-section">
           <h2>Si prefieres comprar ${esc(w.title)} de ${esc(w.author.name)}</h2>
@@ -960,13 +1105,16 @@
     const iber = `https://www.iberlibro.com/servlet/SearchResults?an=${encodeURIComponent(w.author.name.toLowerCase())}&tn=${encodeURIComponent(w.title)}`;
     const osdad = 'https://osdad.org/listado-de-libros-de-segunda-mano/';
     return `
-      <a class="ttl-buy-card" href="${ttl}" target="_blank" rel="noopener noreferrer">
+      <a class="ttl-buy-card" href="${ttl}" target="_blank" rel="noopener noreferrer" aria-label="Buscar ${esc(w.title)} de ${esc(w.author.name)} en TodosTusLibros.com">
+        <span class="ttl-mark" aria-hidden="true"><span>Todos</span><span>Tus</span><span>Libros</span><span>.com</span></span>
         <span class="ttl-buy-copy"><strong>Comprar nuevo en TodosTusLibros.com</strong><span>Consulta ediciones y librerías de España donde conseguirlo.</span></span>
       </a>
       <a class="book-buy-link service-buy-link" href="${iber}" target="_blank" rel="noopener noreferrer">
+        <img class="service-card-logo" src="/assets/images/services/iberlibro-logo.jpg" alt="IberLibro" loading="lazy">
         <span class="service-card-copy"><strong>Buscar de segunda mano en IberLibro</strong><span>Ejemplares usados ofrecidos por librerías y vendedores.</span></span>
       </a>
       <a class="book-buy-link service-buy-link" href="${osdad}" target="_blank" rel="noopener noreferrer">
+        <img class="service-card-logo" src="/assets/images/services/osdad-logo.jpg" alt="Obra Social de Acogida y Desarrollo (OSDAD)" loading="lazy">
         <span class="service-card-copy"><strong>Consultar libros de segunda mano en OSDAD</strong><span>Inventario solidario publicado en Gran Canaria.</span></span>
       </a>`;
   }
@@ -1011,11 +1159,27 @@
   // ---- Eventos ----
   viewButtons.forEach(button => {
     button.addEventListener('click', () => {
-      state.view = button.dataset.libraryView;
-      renderControlState();
-      renderShelves();
+      selectLibraryView(button.dataset.libraryView, true);
     });
   });
+
+  headerViewLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      selectLibraryView(link.dataset.libraryNavView, true);
+    });
+  });
+
+  if (headerHomeLink) {
+    headerHomeLink.addEventListener('click', event => {
+      event.preventDefault();
+      state.view = 'autores';
+      history.replaceState(null, '', urlForView(''));
+      renderControlState();
+      renderShelves();
+      smoothScroll(root);
+    });
+  }
 
   densityButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -1079,6 +1243,10 @@
   // ---- Arranque ----
   applyDensity();
   renderControlState();
+  renderAudienceStatus();
+  if (!state.audience.canarias || (state.audience.canarias === 'si' && !state.audience.island)) {
+    openAudienceDialog();
+  }
   statusEl.textContent = 'Cargando la biblioteca…';
   loadData();
 })();

@@ -31,6 +31,13 @@ Trasladar a staging la experiencia de biblioteca probada en `C:\dev\GofioDesign\
 13. Se añadió crédito por portada y se corrigió la convivencia entre el icono de información y el arrastre del estante.
 14. Los créditos de imagen funcionan como acordeón global: abrir uno cierra cualquier otro abierto en la página.
 15. Se recuperaron las proporciones del playground: portadas 2:3, separación editorial, estante visual, densidades compacta/estándar/ampliada y ficha sin desbordamiento horizontal.
+16. Se añadió una selección de ubicación sin cookies mediante `canarias=si&isla=TF` o `canarias=no` en la URL.
+17. RED BICA, el icono físico y la disponibilidad solo se muestran a visitas de Canarias y se filtran por la isla elegida.
+18. Las fichas muestran directamente los municipios de la isla elegida; ya no vuelven a pedir la isla.
+19. Se recuperaron la marca de TodosTusLibros y los logos locales de IberLibro y OSDAD en las opciones de compra.
+20. Los ejemplares digitales muestran una miniatura de la portada.
+21. `Volver al estante` elimina siempre la ficha activa, incluso después de navegar entre libros relacionados, y conserva la ubicación en la URL.
+22. La biblioteca tiene cabecera propia con accesos a Autores, Temas y A–Z, más un botón diferenciado para volver a `miterapiaregresiva.com`; la navegación conserva ubicación y vista en la URL.
 
 ## Datos y piezas principales
 
@@ -55,6 +62,9 @@ Trasladar a staging la experiencia de biblioteca probada en `C:\dev\GofioDesign\
 - Al abrir un segundo crédito de imagen, el primero se cierra.
 - No hay desbordamiento horizontal en la ficha comprobada en escritorio.
 - Los archivos JavaScript pasan la comprobación de sintaxis y el JSON se puede leer correctamente.
+- La vista `canarias=no` no genera iconos ni secciones BICA; conserva lectura online y compra.
+- La vista `canarias=si&isla=TF` muestra únicamente disponibilidad y municipios de Tenerife.
+- Los enlaces entre libros y la vuelta al estante conservan la ruta de la biblioteca y sus parámetros.
 
 ## Trabajo pendiente, por prioridad
 
@@ -99,6 +109,13 @@ Trasladar a staging la experiencia de biblioteca probada en `C:\dev\GofioDesign\
 - Revisar CSP si se añaden nuevos dominios de imágenes.
 - Ejecutar una comprobación completa de enlaces y recursos.
 - Publicar en GitHub solo después de la validación visual y de BICA.
+
+### 6. Sondeo opcional sobre modalidad de las sesiones
+
+- Se puede preguntar de forma opcional si se prefieren sesiones presenciales, online o indistintas.
+- La URL puede conservar la respuesta individual sin cookies, pero no permite calcular porcentajes globales.
+- Para obtener porcentajes hace falta un receptor de votos agregado (por ejemplo, una función propia) que no guarde IP, identificadores ni respuestas individuales.
+- Antes de activarlo hay que decidir dónde se alojará, definir conservación mínima y reflejar la recogida anónima en privacidad.
 
 ## Cómo retomar
 
