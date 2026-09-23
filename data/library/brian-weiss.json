@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generated_at": "2026-09-23",
-  "last_checked": "2026-09-23T10:05:08Z",
+  "last_checked": "2026-09-23T19:26:20Z",
   "refresh_target": "daily",
   "author": {
     "name": "Brian Weiss",
@@ -18,7 +18,7 @@
       "bica_records": 30,
       "copies": 89,
       "available": 83,
-      "isbn_count": 13,
+      "isbn_count": 0,
       "islands": {
         "FV": {
           "name": "Fuerteventura",
@@ -65,7 +65,7 @@
           "match": "candidate_same_work"
         }
       ],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "lazos-de-amor",
@@ -76,7 +76,7 @@
       "bica_records": 23,
       "copies": 86,
       "available": 81,
-      "isbn_count": 11,
+      "isbn_count": 0,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -124,7 +124,7 @@
           "match": "direct"
         }
       ],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "a-traves-del-tiempo",
@@ -135,7 +135,7 @@
       "bica_records": 16,
       "copies": 42,
       "available": 40,
-      "isbn_count": 11,
+      "isbn_count": 0,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -172,7 +172,7 @@
           "match": "direct"
         }
       ],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "los-mensajes-de-los-sabios",
@@ -183,7 +183,7 @@
       "bica_records": 17,
       "copies": 44,
       "available": 43,
-      "isbn_count": 8,
+      "isbn_count": 0,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -212,7 +212,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "muchos-cuerpos-una-misma-alma",
@@ -223,7 +223,7 @@
       "bica_records": 6,
       "copies": 30,
       "available": 29,
-      "isbn_count": 5,
+      "isbn_count": 0,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -257,7 +257,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "eliminar-el-estres",
@@ -268,7 +268,7 @@
       "bica_records": 5,
       "copies": 16,
       "available": 16,
-      "isbn_count": 4,
+      "isbn_count": 0,
       "islands": {
         "TF": {
           "name": "Tenerife",
@@ -300,7 +300,7 @@
           "match": "direct"
         }
       ],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "meditacion",
@@ -311,7 +311,7 @@
       "bica_records": 4,
       "copies": 18,
       "available": 17,
-      "isbn_count": 3,
+      "isbn_count": 0,
       "islands": {
         "LP": {
           "name": "La Palma",
@@ -340,7 +340,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "espejos-del-tiempo",
@@ -351,7 +351,7 @@
       "bica_records": 5,
       "copies": 19,
       "available": 18,
-      "isbn_count": 3,
+      "isbn_count": 0,
       "islands": {
         "TF": {
           "name": "Tenerife",
@@ -380,7 +380,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "los-milagros-existen",
@@ -391,7 +391,7 @@
       "bica_records": 2,
       "copies": 2,
       "available": 2,
-      "isbn_count": 2,
+      "isbn_count": 0,
       "islands": {
         "TF": {
           "name": "Tenerife",
@@ -420,7 +420,7 @@
           "match": "candidate_same_work"
         }
       ],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "solo-el-amor-es-real",
@@ -431,7 +431,7 @@
       "bica_records": 1,
       "copies": 3,
       "available": 3,
-      "isbn_count": 1,
+      "isbn_count": 0,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -445,7 +445,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     },
     {
       "slug": "muchas-vidas-y-muchos-maestros-lazos-de-amor",
@@ -456,7 +456,7 @@
       "bica_records": 1,
       "copies": 1,
       "available": 1,
-      "isbn_count": 1,
+      "isbn_count": 0,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -465,7 +465,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-09-23T10:05:08Z"
+      "last_checked": "2026-09-23T19:26:20Z"
     }
   ],
   "author_resources": [
