@@ -29,8 +29,8 @@ jobs:
 
       - name: Generate favicon assets
         run: |
-          convert assets/images/original/miterapiaregresiva.com_-1024x1024.png -resize 192x192 assets/icons/android-chrome-192x192.png
-          convert assets/images/original/miterapiaregresiva.com_-1024x1024.png -resize 512x512 assets/icons/android-chrome-512x512.png
+          convert assets/images/branding/miterapiaregresiva-equipo-identidad-logo-principal-1024x1024.png -resize 192x192 assets/icons/miterapiaregresiva-equipo-icono-aplicacion-192x192.png
+          convert assets/images/branding/miterapiaregresiva-equipo-identidad-logo-principal-1024x1024.png -resize 512x512 assets/icons/miterapiaregresiva-equipo-icono-aplicacion-512x512.png
 
       - name: Write manifest
         run: |
@@ -39,8 +39,8 @@ jobs:
             "name": "Mi Terapia Regresiva",
             "short_name": "Mi Terapia Regresiva",
             "icons": [
-              {"src": "android-chrome-192x192.png", "sizes": "192x192", "type": "image/png"},
-              {"src": "android-chrome-512x512.png", "sizes": "512x512", "type": "image/png"}
+              {"src": "miterapiaregresiva-equipo-icono-aplicacion-192x192.png", "sizes": "192x192", "type": "image/png"},
+              {"src": "miterapiaregresiva-equipo-icono-aplicacion-512x512.png", "sizes": "512x512", "type": "image/png"}
             ],
             "theme_color": "#6b3f78",
             "background_color": "#fbf9fc",
@@ -52,21 +52,19 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import re
-          block = ('<link rel="icon" href="assets/icons/favicon.ico" sizes="any">'
-                   '<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">'
-                   '<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">'
-                   '<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">'
-                   '<link rel="manifest" href="assets/icons/site.webmanifest">'
-                   '<meta name="theme-color" content="#6b3f78">')
+          replacements = {
+              'assets/icons/favicon.ico': 'assets/icons/miterapiaregresiva-equipo-icono-favicon-16x16.ico',
+              'assets/icons/favicon-32x32.png': 'assets/icons/miterapiaregresiva-equipo-icono-favicon-32x32.png',
+              'assets/icons/favicon-16x16.png': 'assets/icons/miterapiaregresiva-equipo-icono-favicon-16x16.png',
+              'assets/icons/apple-touch-icon.png': 'assets/icons/miterapiaregresiva-equipo-icono-apple-touch-180x180.png',
+          }
           for p in Path('.').rglob('*.html'):
               text = p.read_text(encoding='utf-8')
-              text = re.sub(r'<link rel="icon"[^>]*>', '', text)
-              text = re.sub(r'<link rel="apple-touch-icon"[^>]*>', '', text)
-              text = re.sub(r'<link rel="manifest"[^>]*>', '', text)
-              text = re.sub(r'<meta name="theme-color"[^>]*>', '', text)
-              text = text.replace('</head>', block + '</head>')
-              p.write_text(text, encoding='utf-8')
+              normalized = text
+              for old, new in replacements.items():
+                  normalized = normalized.replace(old, new)
+              if normalized != text:
+                  p.write_text(normalized, encoding='utf-8')
           PY
 
       - name: Commit favicon normalization
