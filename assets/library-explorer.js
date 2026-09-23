@@ -579,12 +579,12 @@
     if (headerHomeLink) headerHomeLink.href = urlForView('');
   }
 
-  function selectLibraryView(view, updateUrl) {
+  function selectLibraryView(view, updateUrl, jumpToResults) {
     state.view = ['autores', 'temas', 'lista'].includes(view) ? view : 'autores';
     if (updateUrl) history.replaceState(null, '', urlForView(state.view));
     renderControlState();
     renderShelves();
-    smoothScroll(root);
+    smoothScroll(jumpToResults ? shelvesEl : root);
   }
 
   // ---- Estantes ----
@@ -1166,7 +1166,7 @@
   headerViewLinks.forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault();
-      selectLibraryView(link.dataset.libraryNavView, true);
+      selectLibraryView(link.dataset.libraryNavView, true, true);
     });
   });
 

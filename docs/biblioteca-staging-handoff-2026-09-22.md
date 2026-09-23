@@ -37,7 +37,7 @@ Trasladar a staging la experiencia de biblioteca probada en `C:\dev\GofioDesign\
 19. Se recuperaron la marca de TodosTusLibros y los logos locales de IberLibro y OSDAD en las opciones de compra.
 20. Los ejemplares digitales muestran una miniatura de la portada.
 21. `Volver al estante` elimina siempre la ficha activa, incluso después de navegar entre libros relacionados, y conserva la ubicación en la URL.
-22. La biblioteca tiene cabecera propia con accesos a Autores, Temas y A–Z. El propio logotipo es el único enlace de regreso a `miterapiaregresiva.com` y muestra la indicación «← Volver»; la navegación conserva ubicación y vista en la URL.
+22. La biblioteca tiene cabecera propia con accesos a Autores, Temas y A–Z. Estos accesos cambian la vista y desplazan directamente hasta los resultados. El propio logotipo es el único enlace de regreso a `miterapiaregresiva.com` y muestra la indicación «← Volver»; la navegación conserva ubicación y vista en la URL.
 
 ## Datos y piezas principales
 

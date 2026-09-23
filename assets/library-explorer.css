@@ -51,6 +51,7 @@ body:has(.library-audience-dialog[open]){overflow:hidden}
 .library-explorer-density button:hover{border-color:rgba(107,63,120,.42)}
 .library-explorer-density button.is-active{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-strong)}
 .library-explorer-status{min-height:1.5em;color:var(--muted);font-size:.88rem}
+.library-explorer-shelves{scroll-margin-top:6.5rem}
 
 /* ---- Estante ---- */
 .library-explorer-shelves.is-authors-view{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:1.5rem}
