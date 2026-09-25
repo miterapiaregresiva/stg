@@ -3,14 +3,14 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-09-24T10:08:29Z",
+  "last_checked": "2026-09-25T10:18:52Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
   "works": {
     "muchas-vidas-muchos-maestros": {
       "copies": 89,
-      "available": 83,
+      "available": 82,
       "islands": {
         "FV": {
           "name": "Fuerteventura",
@@ -561,7 +561,7 @@
         "TF": {
           "name": "Tenerife",
           "copies": 31,
-          "available": 30,
+          "available": 29,
           "libraries": {
             "TF30": {
               "name": "Telde. Red de Bibliotecas Públicas Municipales",
@@ -713,13 +713,13 @@
             "TF00": {
               "name": "Agüimes. Red de Bibliotecas Públicas Municipales",
               "copies": 2,
-              "available": 2,
+              "available": 1,
               "branches": {
                 "200": {
                   "name": "Biblioteca Pública del Estado en Santa Cruz de Tenerife",
                   "location_code": "S-200",
                   "copies": 2,
-                  "available": 2,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -6914,7 +6914,7 @@
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMjY1Mzg0",
       "copies_total": 2,
-      "copies_available": 2,
+      "copies_available": 1,
       "copies": [
         {
           "copy_id": "972728086",
@@ -6953,8 +6953,8 @@
           "branch_name": "Biblioteca Pública del Estado en Santa Cruz de Tenerife",
           "island_code": "TF",
           "island": "Tenerife",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 16/10/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "N WEI muc",
