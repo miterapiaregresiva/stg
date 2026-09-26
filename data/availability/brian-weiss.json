@@ -3,14 +3,14 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-09-25T10:18:52Z",
+  "last_checked": "2026-09-26T09:59:34Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
   "works": {
     "muchas-vidas-muchos-maestros": {
       "copies": 89,
-      "available": 82,
+      "available": 81,
       "islands": {
         "FV": {
           "name": "Fuerteventura",
@@ -1051,7 +1051,7 @@
         "LZ": {
           "name": "Lanzarote",
           "copies": 14,
-          "available": 14,
+          "available": 13,
           "libraries": {
             "LZ07": {
               "name": "Haría. Biblioteca Pública Municipal de Haría \"María Luisa Perdomo Sosa\"",
@@ -1161,13 +1161,13 @@
             "LZ04": {
               "name": "Santa Brígida",
               "copies": 2,
-              "available": 2,
+              "available": 1,
               "branches": {
                 "409": {
                   "name": "Teguise",
                   "location_code": "S-409",
                   "copies": 2,
-                  "available": 2,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -7898,7 +7898,7 @@
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNDAzMjkx",
       "copies_total": 4,
-      "copies_available": 4,
+      "copies_available": 3,
       "copies": [
         {
           "copy_id": "972848311",
@@ -7964,8 +7964,8 @@
           "branch_name": "Teguise",
           "island_code": "LZ",
           "island": "Lanzarote",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 16/10/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "159 MUC bri",

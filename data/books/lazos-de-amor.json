@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-25",
+  "generated_at": "2026-09-26",
   "refresh_target": "daily",
   "work": {
     "title": "Lazos de amor",
@@ -272,6 +272,6 @@
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvODg5MjA4"
     }
   ],
-  "last_checked": "2026-09-25T10:18:52Z",
+  "last_checked": "2026-09-26T09:59:34Z",
   "availability_source": "/data/availability/brian-weiss.json"
 }
