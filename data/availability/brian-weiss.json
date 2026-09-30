@@ -3,30 +3,30 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-09-29T11:28:10Z",
+  "last_checked": "2026-09-30T11:16:27Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
   "works": {
     "muchas-vidas-muchos-maestros": {
       "copies": 89,
-      "available": 81,
+      "available": 80,
       "islands": {
         "FV": {
           "name": "Fuerteventura",
           "copies": 4,
-          "available": 4,
+          "available": 3,
           "libraries": {
             "FV01": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
               "copies": 1,
-              "available": 1,
+              "available": 0,
               "branches": {
                 "302": {
                   "name": "Corralejo",
                   "location_code": "S-302",
                   "copies": 1,
-                  "available": 1,
+                  "available": 0,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -2428,12 +2428,12 @@
     },
     "lazos-de-amor": {
       "copies": 86,
-      "available": 81,
+      "available": 82,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
           "copies": 27,
-          "available": 23,
+          "available": 24,
           "libraries": {
             "GC11": {
               "name": "Arucas",
@@ -2508,13 +2508,13 @@
             "GC00": {
               "name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
               "copies": 3,
-              "available": 0,
+              "available": 1,
               "branches": {
                 "100": {
                   "name": "Biblioteca Pública del Estado en Las Palmas",
                   "location_code": "S-100",
                   "copies": 3,
-                  "available": 0,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -5731,7 +5731,7 @@
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTI4MjY3OQ",
       "copies_total": 3,
-      "copies_available": 3,
+      "copies_available": 2,
       "copies": [
         {
           "copy_id": "972843755",
@@ -5743,8 +5743,8 @@
           "branch_name": "Corralejo",
           "island_code": "FV",
           "island": "Fuerteventura",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 20/10/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "129 WEI muc",
@@ -10682,7 +10682,7 @@
       "work_slug": "lazos-de-amor",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMjQwOTQw",
       "copies_total": 1,
-      "copies_available": 0,
+      "copies_available": 1,
       "copies": [
         {
           "copy_id": "1066271",
@@ -10694,8 +10694,8 @@
           "branch_name": "Biblioteca Pública del Estado en Las Palmas",
           "island_code": "GC",
           "island": "Gran Canaria",
-          "status": "Disponible después de: 29/09/2026",
-          "available": false,
+          "status": "Disponible",
+          "available": true,
           "reserves": 0,
           "location": "Depósito",
           "signature": "615 WEI laz",

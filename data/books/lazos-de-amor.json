@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-29",
+  "generated_at": "2026-09-30",
   "refresh_target": "daily",
   "work": {
     "title": "Lazos de amor",
@@ -14,13 +14,13 @@
   "summary": {
     "bica_records": 23,
     "copies": 86,
-    "available": 81,
+    "available": 82,
     "isbn_count": 11,
     "islands": {
       "GC": {
         "name": "Gran Canaria",
         "copies": 27,
-        "available": 23
+        "available": 24
       },
       "LZ": {
         "name": "Lanzarote",
@@ -106,7 +106,7 @@
       "isbn": "8440660847",
       "publication": "Barcelona : Ediciones B, 1998.",
       "copies": 1,
-      "available": 0,
+      "available": 1,
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMjQwOTQw"
     },
     {
@@ -272,6 +272,6 @@
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvODg5MjA4"
     }
   ],
-  "last_checked": "2026-09-29T11:28:10Z",
+  "last_checked": "2026-09-30T11:16:27Z",
   "availability_source": "/data/availability/brian-weiss.json"
 }

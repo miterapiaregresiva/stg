@@ -3,19 +3,19 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "raymond-a-moody",
-  "last_checked": "2026-09-29T11:28:10Z",
+  "last_checked": "2026-09-30T11:16:27Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 11,
   "works": {
     "vida-despues-de-la-vida": {
-      "copies": 6,
-      "available": 6,
+      "copies": 5,
+      "available": 5,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
-          "copies": 4,
-          "available": 4,
+          "copies": 3,
+          "available": 3,
           "libraries": {
             "GC07": {
               "name": "Santa Brígida",
@@ -67,27 +67,6 @@
                 "124": {
                   "name": "Santa María de Guía",
                   "location_code": "S-124",
-                  "copies": 1,
-                  "available": 1,
-                  "contact": {
-                    "address": null,
-                    "phone": null,
-                    "email": null,
-                    "opening_hours": null,
-                    "source_url": null,
-                    "last_verified": null
-                  }
-                }
-              }
-            },
-            "GC21": {
-              "name": "Las Palmas de Gran Canaria. Biblioteca Insular de Gran Canaria",
-              "copies": 1,
-              "available": 1,
-              "branches": {
-                "152": {
-                  "name": "Biblioteca Insular de Gran Canaria",
-                  "location_code": "S-152",
                   "copies": 1,
                   "available": 1,
                   "contact": {
@@ -556,37 +535,9 @@
       "bica_id": "837855",
       "work_slug": "vida-despues-de-la-vida",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvODM3ODU1",
-      "copies_total": 1,
-      "copies_available": 1,
-      "copies": [
-        {
-          "copy_id": "821039281",
-          "title_id": "837855",
-          "library_id": "GC21",
-          "library_name": "Las Palmas de Gran Canaria. Biblioteca Insular de Gran Canaria",
-          "branch_id": "152",
-          "location_code": "S-152",
-          "branch_name": "Biblioteca Insular de Gran Canaria",
-          "island_code": "GC",
-          "island": "Gran Canaria",
-          "status": "Disponible",
-          "available": true,
-          "reserves": 0,
-          "location": "Fondo general",
-          "signature": "133.2 MOO vid",
-          "type": "Prestable",
-          "media": "Libros y folletos",
-          "situation": "Circulación",
-          "contact": {
-            "address": null,
-            "phone": null,
-            "email": null,
-            "opening_hours": null,
-            "source_url": null,
-            "last_verified": null
-          }
-        }
-      ],
+      "copies_total": 0,
+      "copies_available": 0,
+      "copies": [],
       "author_slug": "raymond-a-moody"
     },
     {
