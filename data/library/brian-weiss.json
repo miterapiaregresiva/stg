@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-05",
-  "last_checked": "2026-10-05T12:23:58Z",
+  "generated_at": "2026-10-06",
+  "last_checked": "2026-10-06T12:08:44Z",
   "refresh_target": "daily",
   "author": {
     "name": "Brian Weiss",
@@ -16,7 +16,7 @@
         "es"
       ],
       "bica_records": 30,
-      "copies": 89,
+      "copies": 90,
       "available": 80,
       "isbn_count": 0,
       "islands": {
@@ -28,7 +28,7 @@
         "GC": {
           "name": "Gran Canaria",
           "copies": 33,
-          "available": 29
+          "available": 28
         },
         "TF": {
           "name": "Tenerife",
@@ -52,8 +52,8 @@
         },
         "LG": {
           "name": "La Gomera",
-          "copies": 3,
-          "available": 2
+          "copies": 4,
+          "available": 3
         }
       },
       "archive": [
@@ -65,7 +65,7 @@
           "match": "candidate_same_work"
         }
       ],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "lazos-de-amor",
@@ -124,7 +124,7 @@
           "match": "direct"
         }
       ],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "a-traves-del-tiempo",
@@ -172,7 +172,7 @@
           "match": "direct"
         }
       ],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "los-mensajes-de-los-sabios",
@@ -212,7 +212,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "muchos-cuerpos-una-misma-alma",
@@ -257,7 +257,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "eliminar-el-estres",
@@ -300,7 +300,7 @@
           "match": "direct"
         }
       ],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "meditacion",
@@ -340,7 +340,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "espejos-del-tiempo",
@@ -380,7 +380,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "los-milagros-existen",
@@ -420,7 +420,7 @@
           "match": "candidate_same_work"
         }
       ],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "solo-el-amor-es-real",
@@ -445,7 +445,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     },
     {
       "slug": "muchas-vidas-y-muchos-maestros-lazos-de-amor",
@@ -465,7 +465,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-05T12:23:58Z"
+      "last_checked": "2026-10-06T12:08:44Z"
     }
   ],
   "author_resources": [

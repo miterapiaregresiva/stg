@@ -3,13 +3,13 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-10-05T12:23:58Z",
+  "last_checked": "2026-10-06T12:08:44Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
   "works": {
     "muchas-vidas-muchos-maestros": {
-      "copies": 89,
+      "copies": 90,
       "available": 80,
       "islands": {
         "FV": {
@@ -85,7 +85,7 @@
         "GC": {
           "name": "Gran Canaria",
           "copies": 33,
-          "available": 29,
+          "available": 28,
           "libraries": {
             "GC12": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
@@ -125,13 +125,13 @@
             "GC21": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
               "copies": 3,
-              "available": 2,
+              "available": 1,
               "branches": {
                 "152": {
                   "name": "Biblioteca Insular de Gran Canaria",
                   "location_code": "S-152",
                   "copies": 3,
-                  "available": 2,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -1302,19 +1302,19 @@
         },
         "LG": {
           "name": "La Gomera",
-          "copies": 3,
-          "available": 2,
+          "copies": 4,
+          "available": 3,
           "libraries": {
             "LG00": {
-              "name": "S.S.de La Gomera. Biblioteca Pública Municipal de San Sebastián de La Gomera",
-              "copies": 3,
-              "available": 2,
+              "name": "La Aldea de San Nicolás",
+              "copies": 4,
+              "available": 3,
               "branches": {
                 "700": {
                   "name": "San Sebastián de La Gomera",
                   "location_code": "S-700",
-                  "copies": 3,
-                  "available": 2,
+                  "copies": 4,
+                  "available": 3,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -5731,7 +5731,7 @@
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTI4MjY3OQ",
       "copies_total": 3,
-      "copies_available": 2,
+      "copies_available": 1,
       "copies": [
         {
           "copy_id": "972843755",
@@ -5797,8 +5797,8 @@
           "branch_name": "Biblioteca Insular de Gran Canaria",
           "island_code": "GC",
           "island": "Gran Canaria",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 27/10/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "129.4 WEI muc",
@@ -6269,8 +6269,8 @@
       "bica_id": "1179042",
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTE3OTA0Mg",
-      "copies_total": 5,
-      "copies_available": 5,
+      "copies_total": 6,
+      "copies_available": 6,
       "copies": [
         {
           "copy_id": "972725764",
@@ -6287,6 +6287,33 @@
           "reserves": 0,
           "location": "Fondo general",
           "signature": "291.23 WEI muc",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "973286358",
+          "title_id": "1179042",
+          "library_id": "LG00",
+          "library_name": "La Aldea de San Nicolás",
+          "branch_id": "700",
+          "location_code": "S-700",
+          "branch_name": "San Sebastián de La Gomera",
+          "island_code": "LG",
+          "island": "La Gomera",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 WEI muc",
           "type": "Prestable",
           "media": "Libros y folletos",
           "situation": "Circulación",
