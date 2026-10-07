@@ -3,7 +3,7 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-10-06T12:08:44Z",
+  "last_checked": "2026-10-07T11:53:42Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
@@ -3963,12 +3963,12 @@
     },
     "los-mensajes-de-los-sabios": {
       "copies": 44,
-      "available": 43,
+      "available": 42,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
           "copies": 15,
-          "available": 15,
+          "available": 14,
           "libraries": {
             "GC01": {
               "name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
@@ -4155,13 +4155,13 @@
             "GC10": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
               "copies": 2,
-              "available": 2,
+              "available": 1,
               "branches": {
                 "128": {
                   "name": "Playa de Arinaga",
                   "location_code": "S-128",
                   "copies": 2,
-                  "available": 2,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -14360,7 +14360,7 @@
       "work_slug": "los-mensajes-de-los-sabios",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNTQ2Mjcw",
       "copies_total": 3,
-      "copies_available": 3,
+      "copies_available": 2,
       "copies": [
         {
           "copy_id": "972553215",
@@ -14399,8 +14399,8 @@
           "branch_name": "Playa de Arinaga",
           "island_code": "GC",
           "island": "Gran Canaria",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 27/10/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "159.9 WEI men",
