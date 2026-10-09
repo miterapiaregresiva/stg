@@ -3,7 +3,7 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-10-08T12:08:57Z",
+  "last_checked": "2026-10-09T12:00:36Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
@@ -15,7 +15,7 @@
         "FV": {
           "name": "Fuerteventura",
           "copies": 4,
-          "available": 3,
+          "available": 2,
           "libraries": {
             "FV01": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
@@ -41,13 +41,13 @@
             "FV02": {
               "name": "Puerto del Rosario. Biblioteca Pública Municipal de Puerto del Rosario",
               "copies": 2,
-              "available": 2,
+              "available": 1,
               "branches": {
                 "303": {
                   "name": "Puerto del Rosario",
                   "location_code": "S-303",
                   "copies": 2,
-                  "available": 2,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -561,7 +561,7 @@
         "TF": {
           "name": "Tenerife",
           "copies": 31,
-          "available": 29,
+          "available": 30,
           "libraries": {
             "TF30": {
               "name": "Telde. Red de Bibliotecas Públicas Municipales",
@@ -846,13 +846,13 @@
             "TF14": {
               "name": "Arrecife. Biblioteca Insular de Lanzarote",
               "copies": 2,
-              "available": 1,
+              "available": 2,
               "branches": {
                 "226": {
                   "name": "Candelaria",
                   "location_code": "S-226",
                   "copies": 2,
-                  "available": 1,
+                  "available": 2,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -7005,7 +7005,7 @@
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMjY1Mzg1",
       "copies_total": 3,
-      "copies_available": 2,
+      "copies_available": 3,
       "copies": [
         {
           "copy_id": "972804286",
@@ -7071,8 +7071,8 @@
           "branch_name": "Candelaria",
           "island_code": "TF",
           "island": "Tenerife",
-          "status": "No disponible",
-          "available": false,
+          "status": "Disponible",
+          "available": true,
           "reserves": 0,
           "location": "Sala de Lectura",
           "signature": "820(73)-3 WEI muc",
@@ -7096,7 +7096,7 @@
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMzQ4NDU0",
       "copies_total": 4,
-      "copies_available": 4,
+      "copies_available": 3,
       "copies": [
         {
           "copy_id": "181005804",
@@ -7108,8 +7108,8 @@
           "branch_name": "Puerto del Rosario",
           "island_code": "FV",
           "island": "Fuerteventura",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 29/10/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "129 WEI muc",
