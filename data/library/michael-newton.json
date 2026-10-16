@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-15",
+  "generated_at": "2026-10-16",
   "author": {
     "name": "Michael Newton",
     "slug": "michael-newton"
@@ -32,13 +32,13 @@
       ],
       "bica_records": 1,
       "copies": 4,
-      "available": 3,
+      "available": 4,
       "isbn_count": 1,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
           "copies": 3,
-          "available": 2
+          "available": 3
         },
         "LP": {
           "name": "La Palma",
@@ -46,7 +46,7 @@
           "available": 1
         }
       },
-      "last_checked": "2026-10-15T10:03:38Z"
+      "last_checked": "2026-10-16T09:58:30Z"
     },
     {
       "slug": "el-destino-de-las-almas",
@@ -75,7 +75,7 @@
           "available": 1
         }
       },
-      "last_checked": "2026-10-15T10:03:38Z"
+      "last_checked": "2026-10-16T09:58:30Z"
     },
     {
       "slug": "life-between-lives",
@@ -111,5 +111,5 @@
       ]
     }
   ],
-  "last_checked": "2026-10-15T10:03:38Z"
+  "last_checked": "2026-10-16T09:58:30Z"
 }
