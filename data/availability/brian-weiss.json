@@ -3,14 +3,14 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-10-16T09:58:30Z",
+  "last_checked": "2026-10-17T09:29:53Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
   "works": {
     "muchas-vidas-muchos-maestros": {
-      "copies": 90,
-      "available": 81,
+      "copies": 91,
+      "available": 82,
       "islands": {
         "FV": {
           "name": "Fuerteventura",
@@ -1050,8 +1050,8 @@
         },
         "LZ": {
           "name": "Lanzarote",
-          "copies": 14,
-          "available": 13,
+          "copies": 15,
+          "available": 14,
           "libraries": {
             "LZ07": {
               "name": "Haría. Biblioteca Pública Municipal de Haría \"María Luisa Perdomo Sosa\"",
@@ -1063,6 +1063,27 @@
                   "location_code": "S-425",
                   "copies": 2,
                   "available": 2,
+                  "contact": {
+                    "address": null,
+                    "phone": null,
+                    "email": null,
+                    "opening_hours": null,
+                    "source_url": null,
+                    "last_verified": null
+                  }
+                }
+              }
+            },
+            "LZ05": {
+              "name": "La Aldea de San Nicolás",
+              "copies": 3,
+              "available": 3,
+              "branches": {
+                "413": {
+                  "name": "Tinajo",
+                  "location_code": "S-413",
+                  "copies": 3,
+                  "available": 3,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -1126,27 +1147,6 @@
                   "location_code": "S-404",
                   "copies": 1,
                   "available": 1,
-                  "contact": {
-                    "address": null,
-                    "phone": null,
-                    "email": null,
-                    "opening_hours": null,
-                    "source_url": null,
-                    "last_verified": null
-                  }
-                }
-              }
-            },
-            "LZ05": {
-              "name": "Puerto del Rosario. Red de Bibliotecas del Cabildo de Fuerteventura",
-              "copies": 2,
-              "available": 2,
-              "branches": {
-                "413": {
-                  "name": "Tinajo",
-                  "location_code": "S-413",
-                  "copies": 2,
-                  "available": 2,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -6269,8 +6269,8 @@
       "bica_id": "1179042",
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTE3OTA0Mg",
-      "copies_total": 6,
-      "copies_available": 6,
+      "copies_total": 7,
+      "copies_available": 7,
       "copies": [
         {
           "copy_id": "972725764",
@@ -6309,6 +6309,33 @@
           "branch_name": "San Sebastián de La Gomera",
           "island_code": "LG",
           "island": "La Gomera",
+          "status": "Disponible",
+          "available": true,
+          "reserves": 0,
+          "location": "Fondo general",
+          "signature": "129 WEI muc",
+          "type": "Prestable",
+          "media": "Libros y folletos",
+          "situation": "Circulación",
+          "contact": {
+            "address": null,
+            "phone": null,
+            "email": null,
+            "opening_hours": null,
+            "source_url": null,
+            "last_verified": null
+          }
+        },
+        {
+          "copy_id": "973289163",
+          "title_id": "1179042",
+          "library_id": "LZ05",
+          "library_name": "La Aldea de San Nicolás",
+          "branch_id": "413",
+          "location_code": "S-413",
+          "branch_name": "Tinajo",
+          "island_code": "LZ",
+          "island": "Lanzarote",
           "status": "Disponible",
           "available": true,
           "reserves": 0,
@@ -7991,7 +8018,7 @@
           "branch_name": "Teguise",
           "island_code": "LZ",
           "island": "Lanzarote",
-          "status": "Disponible después de: 16/10/2026",
+          "status": "Disponible después de: 06/11/2026",
           "available": false,
           "reserves": 0,
           "location": "Fondo general",
