@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-26",
-  "last_checked": "2026-10-26T11:14:07Z",
+  "generated_at": "2026-10-27",
+  "last_checked": "2026-10-27T10:42:12Z",
   "refresh_target": "daily",
   "author": {
     "name": "Brian Weiss",
@@ -17,13 +17,13 @@
       ],
       "bica_records": 30,
       "copies": 91,
-      "available": 82,
+      "available": 83,
       "isbn_count": 0,
       "islands": {
         "FV": {
           "name": "Fuerteventura",
           "copies": 4,
-          "available": 2
+          "available": 3
         },
         "GC": {
           "name": "Gran Canaria",
@@ -65,7 +65,7 @@
           "match": "candidate_same_work"
         }
       ],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "lazos-de-amor",
@@ -75,7 +75,7 @@
       ],
       "bica_records": 23,
       "copies": 86,
-      "available": 82,
+      "available": 80,
       "isbn_count": 0,
       "islands": {
         "GC": {
@@ -91,12 +91,12 @@
         "FV": {
           "name": "Fuerteventura",
           "copies": 8,
-          "available": 8
+          "available": 7
         },
         "TF": {
           "name": "Tenerife",
           "copies": 30,
-          "available": 30
+          "available": 29
         },
         "LP": {
           "name": "La Palma",
@@ -124,7 +124,7 @@
           "match": "direct"
         }
       ],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "a-traves-del-tiempo",
@@ -172,7 +172,7 @@
           "match": "direct"
         }
       ],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "los-mensajes-de-los-sabios",
@@ -182,13 +182,13 @@
       ],
       "bica_records": 17,
       "copies": 44,
-      "available": 43,
+      "available": 42,
       "isbn_count": 0,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
           "copies": 15,
-          "available": 15
+          "available": 14
         },
         "TF": {
           "name": "Tenerife",
@@ -212,7 +212,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "muchos-cuerpos-una-misma-alma",
@@ -257,7 +257,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "eliminar-el-estres",
@@ -300,7 +300,7 @@
           "match": "direct"
         }
       ],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "meditacion",
@@ -340,7 +340,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "espejos-del-tiempo",
@@ -380,7 +380,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "los-milagros-existen",
@@ -420,7 +420,7 @@
           "match": "candidate_same_work"
         }
       ],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "solo-el-amor-es-real",
@@ -445,7 +445,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     },
     {
       "slug": "muchas-vidas-y-muchos-maestros-lazos-de-amor",
@@ -465,7 +465,7 @@
         }
       },
       "archive": [],
-      "last_checked": "2026-10-26T11:14:07Z"
+      "last_checked": "2026-10-27T10:42:12Z"
     }
   ],
   "author_resources": [

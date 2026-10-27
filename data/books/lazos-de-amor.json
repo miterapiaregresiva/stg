@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-26",
+  "generated_at": "2026-10-27",
   "refresh_target": "daily",
   "work": {
     "title": "Lazos de amor",
@@ -14,7 +14,7 @@
   "summary": {
     "bica_records": 23,
     "copies": 86,
-    "available": 82,
+    "available": 80,
     "isbn_count": 11,
     "islands": {
       "GC": {
@@ -30,12 +30,12 @@
       "FV": {
         "name": "Fuerteventura",
         "copies": 8,
-        "available": 8
+        "available": 7
       },
       "TF": {
         "name": "Tenerife",
         "copies": 30,
-        "available": 30
+        "available": 29
       },
       "LP": {
         "name": "La Palma",
@@ -79,7 +79,7 @@
       "isbn": "9788496581081",
       "publication": "Barcelona : B de Bolsillo, 2023.",
       "copies": 1,
-      "available": 1,
+      "available": 0,
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTM0Mjc5NQ"
     },
     {
@@ -142,7 +142,7 @@
       "isbn": "846661642X",
       "publication": "Barcelona : Ediciones B, 2004.",
       "copies": 7,
-      "available": 7,
+      "available": 6,
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMjQwOTQ0"
     },
     {
@@ -272,6 +272,6 @@
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvODg5MjA4"
     }
   ],
-  "last_checked": "2026-10-26T11:14:07Z",
+  "last_checked": "2026-10-27T10:42:12Z",
   "availability_source": "/data/availability/brian-weiss.json"
 }

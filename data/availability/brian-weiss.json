@@ -3,30 +3,30 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-10-26T11:14:07Z",
+  "last_checked": "2026-10-27T10:42:12Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
   "works": {
     "muchas-vidas-muchos-maestros": {
       "copies": 91,
-      "available": 82,
+      "available": 83,
       "islands": {
         "FV": {
           "name": "Fuerteventura",
           "copies": 4,
-          "available": 2,
+          "available": 3,
           "libraries": {
             "FV01": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
               "copies": 1,
-              "available": 0,
+              "available": 1,
               "branches": {
                 "302": {
                   "name": "Corralejo",
                   "location_code": "S-302",
                   "copies": 1,
-                  "available": 0,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -2428,7 +2428,7 @@
     },
     "lazos-de-amor": {
       "copies": 86,
-      "available": 82,
+      "available": 80,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -2972,18 +2972,18 @@
         "FV": {
           "name": "Fuerteventura",
           "copies": 8,
-          "available": 8,
+          "available": 7,
           "libraries": {
             "FV01": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
               "copies": 1,
-              "available": 1,
+              "available": 0,
               "branches": {
                 "302": {
                   "name": "Corralejo",
                   "location_code": "S-302",
                   "copies": 1,
-                  "available": 1,
+                  "available": 0,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -3084,7 +3084,7 @@
         "TF": {
           "name": "Tenerife",
           "copies": 30,
-          "available": 30,
+          "available": 29,
           "libraries": {
             "TF22": {
               "name": "Puerto del Rosario. Biblioteca Pública Municipal de Puerto del Rosario",
@@ -3271,13 +3271,13 @@
             "TF14": {
               "name": "Arona. Red de Bibliotecas Públicas Municipales",
               "copies": 4,
-              "available": 4,
+              "available": 3,
               "branches": {
                 "226": {
                   "name": "Candelaria",
                   "location_code": "S-226",
                   "copies": 2,
-                  "available": 2,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -3963,23 +3963,23 @@
     },
     "los-mensajes-de-los-sabios": {
       "copies": 44,
-      "available": 43,
+      "available": 42,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
           "copies": 15,
-          "available": 15,
+          "available": 14,
           "libraries": {
             "GC01": {
               "name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
               "copies": 2,
-              "available": 2,
+              "available": 1,
               "branches": {
                 "102": {
                   "name": "Josefina de la Torre",
                   "location_code": "S-102",
                   "copies": 1,
-                  "available": 1,
+                  "available": 0,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -5731,7 +5731,7 @@
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTI4MjY3OQ",
       "copies_total": 3,
-      "copies_available": 1,
+      "copies_available": 2,
       "copies": [
         {
           "copy_id": "972843755",
@@ -5743,8 +5743,8 @@
           "branch_name": "Corralejo",
           "island_code": "FV",
           "island": "Fuerteventura",
-          "status": "Disponible después de: 10/11/2026",
-          "available": false,
+          "status": "Disponible",
+          "available": true,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "129 WEI muc",
@@ -10409,7 +10409,7 @@
       "work_slug": "lazos-de-amor",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTM0Mjc5NQ",
       "copies_total": 1,
-      "copies_available": 1,
+      "copies_available": 0,
       "copies": [
         {
           "copy_id": "972987737",
@@ -10421,8 +10421,8 @@
           "branch_name": "Corralejo",
           "island_code": "FV",
           "island": "Fuerteventura",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 16/11/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "129 WEI laz",
@@ -11127,7 +11127,7 @@
       "work_slug": "lazos-de-amor",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMjQwOTQ0",
       "copies_total": 7,
-      "copies_available": 7,
+      "copies_available": 6,
       "copies": [
         {
           "copy_id": "971216085",
@@ -11166,8 +11166,8 @@
           "branch_name": "Candelaria",
           "island_code": "TF",
           "island": "Tenerife",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 16/11/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "159.9 WEI laz",
@@ -13423,7 +13423,7 @@
       "work_slug": "los-mensajes-de-los-sabios",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTM1MDAxNw",
       "copies_total": 3,
-      "copies_available": 3,
+      "copies_available": 2,
       "copies": [
         {
           "copy_id": "973184159",
@@ -13435,8 +13435,8 @@
           "branch_name": "Josefina de la Torre",
           "island_code": "GC",
           "island": "Gran Canaria",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 16/11/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "159.9 WEI men",
