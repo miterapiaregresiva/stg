@@ -3,7 +3,7 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-10-28T11:27:37Z",
+  "last_checked": "2026-10-29T11:38:14Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
@@ -4769,12 +4769,12 @@
     },
     "muchos-cuerpos-una-misma-alma": {
       "copies": 30,
-      "available": 29,
+      "available": 28,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
           "copies": 9,
-          "available": 9,
+          "available": 8,
           "libraries": {
             "GC01": {
               "name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
@@ -4884,13 +4884,13 @@
             "GC03": {
               "name": "Tuineje. Red de Bibliotecas Públicas Municipales",
               "copies": 1,
-              "available": 1,
+              "available": 0,
               "branches": {
                 "118": {
                   "name": "Arguineguín",
                   "location_code": "S-118",
                   "copies": 1,
-                  "available": 1,
+                  "available": 0,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -15060,7 +15060,7 @@
       "work_slug": "muchos-cuerpos-una-misma-alma",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMzI3MDYz",
       "copies_total": 9,
-      "copies_available": 9,
+      "copies_available": 8,
       "copies": [
         {
           "copy_id": "972365916",
@@ -15099,8 +15099,8 @@
           "branch_name": "Arguineguín",
           "island_code": "GC",
           "island": "Gran Canaria",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 19/11/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "159.9 WEI muc",

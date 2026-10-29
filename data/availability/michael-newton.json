@@ -3,19 +3,19 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "michael-newton",
-  "last_checked": "2026-10-28T11:27:37Z",
+  "last_checked": "2026-10-29T11:38:14Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 2,
   "works": {
     "el-viaje-de-las-almas": {
       "copies": 4,
-      "available": 4,
+      "available": 3,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
           "copies": 3,
-          "available": 3,
+          "available": 2,
           "libraries": {
             "GC00": {
               "name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
@@ -41,13 +41,13 @@
             "GC12": {
               "name": "Las Palmas de Gran Canaria. Biblioteca Pública del Estado en Las Palmas",
               "copies": 1,
-              "available": 1,
+              "available": 0,
               "branches": {
                 "132": {
                   "name": "Biblioteca Central de Santa Lucía",
                   "location_code": "S-132",
                   "copies": 1,
-                  "available": 1,
+                  "available": 0,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -157,7 +157,7 @@
       "work_slug": "el-viaje-de-las-almas",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTIzMzA5MA",
       "copies_total": 4,
-      "copies_available": 4,
+      "copies_available": 3,
       "copies": [
         {
           "copy_id": "972608695",
@@ -196,8 +196,8 @@
           "branch_name": "Biblioteca Central de Santa Lucía",
           "island_code": "GC",
           "island": "Gran Canaria",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 18/11/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "2-187 NEW via",
