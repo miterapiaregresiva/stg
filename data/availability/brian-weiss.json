@@ -3,7 +3,7 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-10-29T11:38:14Z",
+  "last_checked": "2026-10-30T11:32:01Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
@@ -4769,7 +4769,7 @@
     },
     "muchos-cuerpos-una-misma-alma": {
       "copies": 30,
-      "available": 28,
+      "available": 29,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -4956,7 +4956,7 @@
         "TF": {
           "name": "Tenerife",
           "copies": 10,
-          "available": 9,
+          "available": 10,
           "libraries": {
             "TF00": {
               "name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
@@ -4982,13 +4982,13 @@
             "TF13": {
               "name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
               "copies": 1,
-              "available": 0,
+              "available": 1,
               "branches": {
                 "224": {
                   "name": "Los Realejos",
                   "location_code": "S-224",
                   "copies": 1,
-                  "available": 0,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -7135,7 +7135,7 @@
           "branch_name": "Puerto del Rosario",
           "island_code": "FV",
           "island": "Fuerteventura",
-          "status": "Disponible después de: 29/10/2026",
+          "status": "No disponible",
           "available": false,
           "reserves": 0,
           "location": "Fondo general",
@@ -14780,7 +14780,7 @@
       "work_slug": "muchos-cuerpos-una-misma-alma",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMjY1MzYx",
       "copies_total": 10,
-      "copies_available": 9,
+      "copies_available": 10,
       "copies": [
         {
           "copy_id": "571016819",
@@ -14954,8 +14954,8 @@
           "branch_name": "Los Realejos",
           "island_code": "TF",
           "island": "Tenerife",
-          "status": "Disponible después de: 16/11/2026",
-          "available": false,
+          "status": "Disponible",
+          "available": true,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "129:615.851 WEI muc",
