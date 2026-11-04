@@ -3,14 +3,14 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-11-03T12:54:46Z",
+  "last_checked": "2026-11-04T13:06:20Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
   "works": {
     "muchas-vidas-muchos-maestros": {
       "copies": 91,
-      "available": 84,
+      "available": 83,
       "islands": {
         "FV": {
           "name": "Fuerteventura",
@@ -85,7 +85,7 @@
         "GC": {
           "name": "Gran Canaria",
           "copies": 33,
-          "available": 28,
+          "available": 27,
           "libraries": {
             "GC12": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
@@ -195,13 +195,13 @@
             "GC01": {
               "name": "Las Palmas de Gran Canaria. Red de Bibliotecas Públicas Municipales",
               "copies": 4,
-              "available": 4,
+              "available": 3,
               "branches": {
                 "115": {
                   "name": "La Isleta",
                   "location_code": "S-115",
                   "copies": 1,
-                  "available": 1,
+                  "available": 0,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -5997,7 +5997,7 @@
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTIxNDAxNg",
       "copies_total": 2,
-      "copies_available": 2,
+      "copies_available": 1,
       "copies": [
         {
           "copy_id": "973129967",
@@ -6009,8 +6009,8 @@
           "branch_name": "La Isleta",
           "island_code": "GC",
           "island": "Gran Canaria",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 24/11/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "615 WEI muc",
