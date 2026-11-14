@@ -3,7 +3,7 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-11-13T13:14:25Z",
+  "last_checked": "2026-11-14T12:18:48Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
@@ -1334,7 +1334,7 @@
     },
     "a-traves-del-tiempo": {
       "copies": 42,
-      "available": 39,
+      "available": 40,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -1696,7 +1696,7 @@
         "TF": {
           "name": "Tenerife",
           "copies": 14,
-          "available": 13,
+          "available": 14,
           "libraries": {
             "TF29": {
               "name": "Valsequillo de Gran Canaria",
@@ -1743,13 +1743,13 @@
             "TF00": {
               "name": "Puerto del Rosario. Red de Bibliotecas del Cabildo de Fuerteventura",
               "copies": 2,
-              "available": 1,
+              "available": 2,
               "branches": {
                 "200": {
                   "name": "Biblioteca Pública del Estado en Santa Cruz de Tenerife",
                   "location_code": "S-200",
                   "copies": 2,
-                  "available": 1,
+                  "available": 2,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -8832,7 +8832,7 @@
       "work_slug": "a-traves-del-tiempo",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTAzNTgy",
       "copies_total": 4,
-      "copies_available": 3,
+      "copies_available": 4,
       "copies": [
         {
           "copy_id": "331036158",
@@ -8925,8 +8925,8 @@
           "branch_name": "Biblioteca Pública del Estado en Santa Cruz de Tenerife",
           "island_code": "TF",
           "island": "Tenerife",
-          "status": "Disponible después de: 30/11/2026",
-          "available": false,
+          "status": "Disponible",
+          "available": true,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "615.851 WEI atr",
