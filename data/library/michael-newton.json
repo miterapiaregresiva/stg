@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-17",
+  "generated_at": "2026-11-18",
   "author": {
     "name": "Michael Newton",
     "slug": "michael-newton"
@@ -46,7 +46,7 @@
           "available": 1
         }
       },
-      "last_checked": "2026-11-17T14:33:47Z"
+      "last_checked": "2026-11-18T14:08:31Z"
     },
     {
       "slug": "el-destino-de-las-almas",
@@ -75,7 +75,7 @@
           "available": 1
         }
       },
-      "last_checked": "2026-11-17T14:33:47Z"
+      "last_checked": "2026-11-18T14:08:31Z"
     },
     {
       "slug": "life-between-lives",
@@ -111,5 +111,5 @@
       ]
     }
   ],
-  "last_checked": "2026-11-17T14:33:47Z"
+  "last_checked": "2026-11-18T14:08:31Z"
 }
