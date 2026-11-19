@@ -3,14 +3,14 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-11-18T14:08:31Z",
+  "last_checked": "2026-11-19T14:32:34Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
   "works": {
     "muchas-vidas-muchos-maestros": {
       "copies": 91,
-      "available": 83,
+      "available": 82,
       "islands": {
         "FV": {
           "name": "Fuerteventura",
@@ -561,7 +561,7 @@
         "TF": {
           "name": "Tenerife",
           "copies": 31,
-          "available": 31,
+          "available": 30,
           "libraries": {
             "TF30": {
               "name": "Telde. Red de Bibliotecas Públicas Municipales",
@@ -713,13 +713,13 @@
             "TF00": {
               "name": "Agüimes. Red de Bibliotecas Públicas Municipales",
               "copies": 2,
-              "available": 2,
+              "available": 1,
               "branches": {
                 "200": {
                   "name": "Biblioteca Pública del Estado en Santa Cruz de Tenerife",
                   "location_code": "S-200",
                   "copies": 2,
-                  "available": 2,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -6968,7 +6968,7 @@
       "work_slug": "muchas-vidas-muchos-maestros",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMjY1Mzg0",
       "copies_total": 2,
-      "copies_available": 2,
+      "copies_available": 1,
       "copies": [
         {
           "copy_id": "972728086",
@@ -7007,8 +7007,8 @@
           "branch_name": "Biblioteca Pública del Estado en Santa Cruz de Tenerife",
           "island_code": "TF",
           "island": "Tenerife",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 09/12/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "N WEI muc",
@@ -13951,7 +13951,7 @@
           "branch_name": "Biblioguagua Municipal de Santa Cruz de Tenerife",
           "island_code": "TF",
           "island": "Tenerife",
-          "status": "Disponible después de: 18/11/2026",
+          "status": "No disponible",
           "available": false,
           "reserves": 0,
           "location": "Depósito",
@@ -15099,7 +15099,7 @@
           "branch_name": "Arguineguín",
           "island_code": "GC",
           "island": "Gran Canaria",
-          "status": "Disponible después de: 19/11/2026",
+          "status": "Disponible después de: 10/12/2026",
           "available": false,
           "reserves": 0,
           "location": "Fondo general",
