@@ -3,7 +3,7 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-11-20T14:09:00Z",
+  "last_checked": "2026-11-21T13:35:32Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
@@ -2428,7 +2428,7 @@
     },
     "lazos-de-amor": {
       "copies": 86,
-      "available": 80,
+      "available": 81,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -2972,18 +2972,18 @@
         "FV": {
           "name": "Fuerteventura",
           "copies": 8,
-          "available": 7,
+          "available": 8,
           "libraries": {
             "FV01": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
               "copies": 1,
-              "available": 0,
+              "available": 1,
               "branches": {
                 "302": {
                   "name": "Corralejo",
                   "location_code": "S-302",
                   "copies": 1,
-                  "available": 0,
+                  "available": 1,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -10409,7 +10409,7 @@
       "work_slug": "lazos-de-amor",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvMTM0Mjc5NQ",
       "copies_total": 1,
-      "copies_available": 0,
+      "copies_available": 1,
       "copies": [
         {
           "copy_id": "972987737",
@@ -10421,8 +10421,8 @@
           "branch_name": "Corralejo",
           "island_code": "FV",
           "island": "Fuerteventura",
-          "status": "Disponible después de: 09/12/2026",
-          "available": false,
+          "status": "Disponible",
+          "available": true,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "129 WEI laz",
