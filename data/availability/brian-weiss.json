@@ -3,7 +3,7 @@
   "source": "RED BICA / OpacDiscovery",
   "source_mode": "public GET only",
   "author_slug": "brian-weiss",
-  "last_checked": "2026-11-24T16:00:25Z",
+  "last_checked": "2026-11-26T15:26:15Z",
   "refresh_target": "daily",
   "notice": "Disponibilidad actualizada una vez al día. Recomendamos llamar a la biblioteca antes de desplazarse.",
   "records_checked": 110,
@@ -2428,7 +2428,7 @@
     },
     "lazos-de-amor": {
       "copies": 86,
-      "available": 81,
+      "available": 80,
       "islands": {
         "GC": {
           "name": "Gran Canaria",
@@ -2972,7 +2972,7 @@
         "FV": {
           "name": "Fuerteventura",
           "copies": 8,
-          "available": 8,
+          "available": 7,
           "libraries": {
             "FV01": {
               "name": "La Oliva. Red de Bibliotecas Públicas Municipales",
@@ -3061,13 +3061,13 @@
             "FV05": {
               "name": "Puerto del Rosario. Biblioteca Pública Municipal de Puerto del Rosario",
               "copies": 1,
-              "available": 1,
+              "available": 0,
               "branches": {
                 "308": {
                   "name": "Pájara",
                   "location_code": "S-308",
                   "copies": 1,
-                  "available": 1,
+                  "available": 0,
                   "contact": {
                     "address": null,
                     "phone": null,
@@ -6009,7 +6009,7 @@
           "branch_name": "La Isleta",
           "island_code": "GC",
           "island": "Gran Canaria",
-          "status": "Disponible después de: 24/11/2026",
+          "status": "Disponible después de: 15/12/2026",
           "available": false,
           "reserves": 0,
           "location": "Fondo general",
@@ -11916,7 +11916,7 @@
       "work_slug": "lazos-de-amor",
       "permalink": "https://red-bica.bibliotecadecanarias.org/OpacDiscovery/public/catalog/detail/b2FpOmJpYmxpb2dyYXBoaWM6ZXMuYmFyYXR6LmJpY2EvNTQxOTM0",
       "copies_total": 9,
-      "copies_available": 9,
+      "copies_available": 8,
       "copies": [
         {
           "copy_id": "972339504",
@@ -11982,8 +11982,8 @@
           "branch_name": "Pájara",
           "island_code": "FV",
           "island": "Fuerteventura",
-          "status": "Disponible",
-          "available": true,
+          "status": "Disponible después de: 16/12/2026",
+          "available": false,
           "reserves": 0,
           "location": "Fondo general",
           "signature": "82-3 WEI laz",
