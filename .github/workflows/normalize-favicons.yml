@@ -2,6 +2,7 @@ name: Normalize favicons
 
 on:
   push:
+    branches: [main]
     paths:
       - '.github/workflows/normalize-favicons.yml'
       - '**/*.html'
